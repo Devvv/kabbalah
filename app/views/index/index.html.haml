@@ -1,0 +1,97 @@
+.big-slider
+  .big-slider-view#index_slider
+    %a{:href=>'', :title=>''}
+      %img{:src => '/assets/demo/slide-big-one.jpg', :width => '970', :height => '390', :alt => '' }
+    %a{:href=>'', :title=>''}
+      %img{:src => '/assets/demo/slide-big-two.jpg', :width => '970', :height => '390', :alt => '' }
+    %a{:href=>'', :title=>''}
+      %img{:src => '/assets/demo/slide-big-three.jpg', :width => '970', :height => '390', :alt => '' }
+:javascript
+  $(function(){
+    window.myFlux = new flux.slider('#index_slider', {
+      autoplay: true,
+      pagination: true,
+      transitions: ['blocks']
+    });
+  });
+
+.slider_line
+  %p
+    Вводная лекция «Открой Каббалу» – каждые понедельник и среду в 19:45. Вход свободный!
+  .btn.btn-red.pull-right
+    Записаться
+.left_side
+  %h3
+    Новости
+  .content_box
+    .w50
+      .img
+        %img{:src => '/assets/index-img.jpg', :alt => ''}
+      .clear
+      %h4
+        %a{:href => '#', :title => ''}
+          Открытие современного центра в Москве
+      .clear
+      %p
+        %a{:href => '#', :title => ''}
+          СОБЫТИЕ
+        Всего находить в повседневной жизни вместе создавать прекрасные моменты и  всего находить в повседневной жизни воспоминания.
+    .w50
+      .img
+        %img{:src => '/assets/index-img.jpg', :alt => ''}
+      .clear
+      %h4
+        %a{:href => '#', :title => ''}
+          Открытие и презентация
+          %br
+          Московского Каббала
+          %br
+          Форума
+      .clear
+      %p
+        %a{:href => '#', :title => ''}
+          СОБЫТИЕ
+        Всего находить в повседневной жизни вместе создавать прекрасные моменты и  всего находить в повседневной жизни
+        %br
+        воспоминания.
+  %h3
+    Настрой Дня
+  .content_box
+    .w100
+      .suscribe_best_day
+        .fs25
+          Каждая трудность и жизненный вызов – это шанс для роста, а не злоключение сердца и души.
+        %p.sans
+          Подписаться на Настрой Дня
+        %form
+          %input{:type => 'text', :value => "", :placeholder => 'Логин', :name => ''}
+          %input{:type => 'mail', :value => "", :placeholder => 'Пароль', :name => ''}
+          %input.btn.btn-blue.pull-right{:type => 'submit', :value => "Подписаться",  :name => ''}
+  %h3
+    Видео
+  .content_box
+    .w100
+      .index_video
+        %p.sans
+          Настрой Дня от Йегуды Берга – это мгновенный духовный настрой, который озарит каждый ваш день!
+        %div
+          %img{:src => '/assets/video.jpg', :alt => '', :width => '720', :height => '400'}
+  %h3
+    Календарь событий
+  .content_box
+    .w100
+      .calendar_event
+        #calendar
+.right_side
+  %a{:href => '#', :title => 'mobile app'}
+    %img{:src => '/assets/mobile_app.jpg', :alt => ''}
+  %div
+    %img{:src => '/assets/banner1.jpg', :alt => ''}
+  .social-link
+    %a.f{:href => '#', :title => ''}
+    %a.t{:href => '#', :title => ''}
+    %a.v{:href => '#', :title => ''}
+
+  %a{:href => '#', :title => 'mobile app'}
+    %img{:src => '/assets/banner2.jpg', :alt => ''}
+

@@ -1,0 +1,25 @@
+@mixin radius($zn)
+  -webkit-border-radius: $zn
+  -moz-border-radius: $zn
+  border-radius: $zn
+@mixin gradient_vertical($first, $last)
+  background: $first
+  background: -moz-linear-gradient(top,  $first 0%, $last 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$first), color-stop(100%,$last))
+  background: -webkit-linear-gradient(top,  $first 0%,$last 100%)
+  background: -o-linear-gradient(top,  $first 0%,$last 100%)
+  background: -ms-linear-gradient(top,  $first 0%,$last 100%)
+  background: linear-gradient(to bottom,  $first 0%,$last 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$last',GradientType=0 )
+@mixin box-shadow($zn)
+  -webkit-box-shadow: $zn
+  -moz-box-shadow: $zn
+  box-shadow: $zn
+@mixin text-overflow()
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+@mixin border_box()
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box

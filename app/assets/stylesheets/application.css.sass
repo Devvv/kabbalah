@@ -1,0 +1,844 @@
+@import reset
+@import mixins
+@import datepicker
+@import nanoscroll
+
+$default_color: #262626
+
+$link_color: #ffffff
+$link_color_hover: #26a0ad
+$link_color_hover_header: #87e0ea
+$border_color: #e6e6e6
+
+$sans: sans-serif
+$serif: Georgia
+
+html,
+button,
+input,
+select,
+textarea
+  color: #222
+
+body
+  font-size: 16px
+  color: #262626
+  \::-moz-selection, ::selection
+  background: #f5f5f5
+  text-shadow: none
+  //background: url('/assets/demo/home.jpg') center top no-repeat
+  //background: url('/assets/demo/calendar.jpg') center top no-repeat
+  //background: url('/assets/demo/online_enduc.jpg') center top no-repeat
+
+a
+  color: $link_color
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    color: $link_color_hover
+
+hr
+  display: block
+  height: 1px
+  border: 0
+  border-top: 1px solid $border_color
+  margin: 1em 0
+  padding: 0
+
+img
+  vertical-align: middle
+p
+  margin: 20px 0
+fieldset
+  border: 0
+  margin: 0
+  padding: 0
+
+textarea
+  resize: vertical
+
+#box
+  width: 979px
+  position: relative
+  top: 0
+  left: 50%
+  margin-left: -489px
+  background: #ffffff
+  //opacity: 0.7
+  #header
+    width: 100%
+    .container
+      width: 100%
+      background: #26a0ad
+      overflow: hidden
+      .top
+        width: 100%
+        background: #26a0ad
+        padding: 15px 0 10px 0
+        overflow: hidden
+        @include box-shadow( 0px 2px 5px -1px rgba(38, 38, 38, 0.2) )
+        .btn
+          float: left
+          &:hover
+            color: $link_color_hover_header
+        .btn:first-child
+          float: left
+        .btn:last-child
+          margin-right: 19px
+          float: right
+        .auth-line
+          float: right
+          overflow: hidden
+          width: 768px
+        .delimer
+          width: 0px
+          padding: 3px 0
+          margin-left: -10px
+        .forgot_password
+          padding-left: 0
+        form
+          display: block
+          float: left
+          input
+            width: 186px
+            &:first-child
+              margin-right: 5px
+      .logo
+        position: relative
+        top: 0
+        left: 50%
+        margin-left: -178px
+        margin-top: 46px
+        display: block
+        margin-bottom: 34px
+        float: left
+      .callback_block
+        float: right
+        margin-top: 65px
+        width: 165px
+        margin-right: 30px
+        a
+          display: block
+          width: 100%
+          text-align: right
+          &:hover
+            color: $link_color_hover_header
+          &:first-child
+            font-size: 19px
+            margin-bottom: 6px
+          &:last-child
+            font-size: 14px
+          i
+            float: right
+
+    .header-menu
+      width: 100%
+      background: #dedede
+      list-style: none
+      margin: 0
+      padding: 0
+      display: table
+      li
+        border-right: 1px solid #c4c4c4
+        float: left
+        position: relative
+        &:last-child
+          border: none
+        a
+          padding: 14px 27px
+          text-transform: uppercase
+          font-size: 14px
+          display: block
+          color: $default_color
+          &:hover
+            text-decoration: none
+            color: $link_color_hover
+        ul
+          display: none
+          position: absolute
+          top: 44px
+          left: 0
+          background: #ffffff
+          list-style: none
+          margin: 0
+          padding: 16px 20px
+          overflow: hidden
+          z-index: 500
+          li
+            width: 100%
+            border: none
+            display: block
+            a
+              font-size: 13px
+              margin-bottom: 8px
+              color: $default_color
+              display: block
+              text-transform: none
+              white-space: nowrap
+              padding: 0
+              &:hover
+                color: $link_color_hover
+      .hover
+        >a
+          background: #ffffff
+          color: $link_color_hover
+      li:hover
+        ul
+          display: block
+
+  #body
+    .big-slider
+      width: 100%
+      //height: 390px
+      overflow: visible
+      position: relative
+      .big-slider-view
+        overflow: visible
+        img
+          width: 100%
+      #index_slider
+        .fluxslider
+          position: relative
+          height: 390px !important
+        .pagination
+          position: absolute
+          top: 365px
+          width: 100%
+          left: 0
+          z-index: 500
+          text-align: center
+          li
+            display: inline-block
+            margin-left: 0px
+            cursor: pointer
+            width: 13px
+            height: 13px
+            font-size: 14px
+            background: rgba(255, 255, 255, 0.6)
+            color: rgba(255, 255, 255, 0)
+            overflow: hidden
+            @include radius(500px)
+            margin-right: 10px
+          .current
+            background: rgba(255, 255, 255, 1)
+    .slider_line
+      padding: 14px 0px
+      background: #8c0035
+      overflow: hidden
+      p
+        width: 80%
+        float: left
+        margin: 0
+        margin-left: 22px
+        margin-top: 8px
+        color: #ffffff
+      .btn
+        font-size: 14px
+        padding: 6px 20px
+        margin-right: 23px
+
+    .left_side
+      float: left
+      width: 720px
+      padding: 35px 0 0 0
+      margin-left: 20px
+      h2
+        display: block
+        width: 100%
+        overflow: hidden
+        font-size: 31px
+        margin: 0
+        padding: 0
+        font-weight: normal
+        margin-bottom: 20px
+      h3
+        display: block
+        width: 100%
+        overflow: hidden
+        font-size: 23px
+        border-bottom: 1px solid $border_color
+        margin: 0
+        padding: 0
+        font-weight: normal
+        padding-bottom: 13px
+        margin-bottom: 20px
+      p
+        font-size: 16px
+        line-height: 25px
+        font-family: $serif
+      .p-big
+        font-size: 22px
+        line-height: 30px
+        width: 100%
+        clear: both
+        padding: 0
+        margin: 0
+        margin-bottom: 40px
+        font-family: $serif
+      .content_banner
+        display: block
+        overflow: hidden
+        width: 100%
+        margin-bottom: 40px
+        margin-top: 30px
+      ul.ul-box-list-one
+        display: table
+        width: 100%
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          display: block
+          width: 100%
+          margin-bottom: 30px
+          border-bottom: 1px solid $border_color
+          padding-bottom: 31px
+          a
+            margin: 0
+            padding: 0
+            font-size: 15px
+            line-height: 26px
+
+            overflow: hidden
+            color: $link_color_hover
+            text-decoration: underline
+            &:hover
+              text-decoration: none
+          >a:first-child
+            color: $default_color
+            font-size: inherit
+            line-height: inherit
+            text-decoration: none
+            display: block
+            &:hover
+              text-decoration: none
+              h4
+                color: $link_color_hover !important
+            span
+              display: block
+              width: 100%
+              font-size: 15px
+              color: rgb(38, 160, 173)
+              clear: both
+              margin-bottom: 9px
+            h4
+              padding: 0
+              margin: 0
+              font-size: 20px
+              margin-bottom: 18px
+              display: block
+              width: 100%
+              clear: both
+            p
+              margin: 0
+              padding: 0
+              font-size: 17px
+              line-height: 26px
+              font-family: $serif
+      ul.ul-box-list-three
+        display: table
+        width: 110%
+        list-style: none
+        margin: 0
+        padding: 0
+        margin-bottom: 20px
+        li
+          display: block
+          width: 228px
+          overflow: hidden
+          margin-bottom: 20px
+          margin-right: 18px
+          float: left
+          a
+            display: block
+            overflow: hidden
+            color: #333333
+            &:hover
+              text-decoration: none
+              h4
+                color: $link_color_hover !important
+            >*
+              display: block
+              width: 100%
+              margin: 0
+              padding: 0
+              margin-bottom: 15px
+            .img
+              max-height: 139px
+              overflow: hidden
+              img
+                width: 100% !important
+            h4
+              font-size: 16px
+            p
+              font-size: 15px
+              line-height: 19px
+              font-family: $serif
+            span
+              color: #262626
+              font-size: 12px
+        li.clear
+          width: 100% !important
+          padding: 0
+          margin: 0
+      .pagination
+        width: 100%
+        overflow: hidden
+        text-align: center
+        margin-bottom: 50px
+      .content_box
+        width: 100%
+        overflow: hidden
+        margin-bottom: 17px
+        .w100
+          width: 100%
+          margin-bottom: 20px
+        .w50
+          width: 350px
+          margin-right: 20px
+          margin-bottom: 20px
+          float: left
+          &:nth-child(2n)
+            margin-right: 0
+        .w100,
+        .w50
+          .img
+            width: 350px
+            height: 240px
+            overflow: hidden
+            margin-bottom: 20px
+            img
+              width: 100%
+          h4
+            width: 100%
+            color: $default_color
+            font-size: 22px
+            margin-top: 0
+            margin-bottom: 11px
+            a
+              color: $default_color
+              &:hover
+                text-decoration: none
+                color: $link_color_hover
+          p
+            width: 100%
+            display: block
+            clear: both
+            font-size: 16px
+            padding: 0
+            margin: 0
+            line-height: 19px
+            font-family: $serif
+            a
+              font-weight: bold
+              color: $link_color_hover
+              margin-right: 5px
+              font-size: 13px
+              &:hover
+                color: $link_color_hover
+          .sans
+            font-family: $sans
+          .suscribe_best_day
+            margin-bottom: 83px
+            .fs25
+              font-size: 27px
+              margin-top: 6px
+              line-height: 31px
+              margin-bottom: 43px
+              font-family: $serif
+            p
+              font-size: 17px
+              margin-bottom: 17px
+            form
+              margin-bottom: 20px
+              input[type=text],
+              input[type=mail]
+                width: 254px
+                float: left
+                background: #f5f5f5
+                margin-right: 11px
+                padding: 1px 12px
+                border: 1px solid $border_color
+              input[type=submit]
+                padding-top: 5px
+                padding-bottom: 5px
+                padding-right: 27px
+                padding-left: 27px
+          .index_video
+            margin-bottom: 22px
+            p
+              font-size: 18px
+              margin-top: 1px
+              line-height: 26px
+              width: 100%
+              clear: both
+              margin-bottom: 25px
+            div
+              overflow: hidden
+              width: 100%
+          .calendar_event
+            margin-bottom: 28px
+    .right_side
+      float: right
+      width: 200px
+      padding: 35px 0 0 0
+      margin-right: 20px
+      >*
+        width: 100%
+        margin-bottom: 20px
+        display: block
+        overflow: hidden
+      .social-link
+        margin: 37px 0
+        padding: 0 27px
+        a
+          display: block
+          width: 42px
+          height: 42px
+          float: left
+          margin-right: 9px
+          &:last-shild
+            margin: 0
+        .f
+          background: url('/assets/soc_ico.png') left top no-repeat
+        .t
+          background: url('/assets/soc_ico.png') center top no-repeat
+        .v
+          background: url('/assets/soc_ico.png') right top no-repeat
+    .video_container
+      width: 100%
+      display: table
+      background: #474747
+      padding-bottom: 20px
+      position: relative
+      .left_side,
+      .right_side
+        padding-top: 0
+        margin-top: 20px
+      .left_side
+        .video_box
+          width: 100%
+          overflow: hidden
+          height: 400px
+
+      .right_side
+        height: 400px
+        margin-bottom: 0 !important
+        overflow: visible
+        .content_slider
+          width: 100%
+          margin-bottom: 0 !important
+          ul
+            overflow: hidden
+            width: 100%
+            list-style: none
+            margin: 0
+            padding: 0
+            li
+              width: 100%
+              overflow: hidden
+              padding-bottom: 5px
+              margin-bottom: 10px
+              border-bottom: 1px solid #262626
+              &:last-child
+                border-bottom: none !important
+              a
+                display: block
+                overflow: hidden
+                &:hover
+                  color: $link_color_hover
+                  text-decoration: none
+                  p
+                    color: $link_color_hover
+                .img
+                  width: 120px
+                  height: 70px
+                  overflow: hidden
+                  margin-bottom: 10px
+                  img
+                    width: 100%
+                p
+                  font-size: 12px
+                  color: #ffffff
+                  width: 80%
+                  margin: 0
+                  padding: 0
+                  line-height: 20px
+  #footer_banner
+    overflow: hidden
+    width: 100%
+    margin-bottom: 45px
+    margin-top: 6px
+    img
+      width: 100%
+
+  #footer
+    overflow: hidden
+    width: 100%
+    .left-side
+      float: left
+      width: 270px
+      margin-left: 20px
+      .find
+        margin-bottom: 26px
+        input:first-child
+          border: 1px solid $border_color
+          margin: 0
+          width: 73%
+        input[type=submit]
+          left: 199px
+          right: auto
+          top: 8px
+      p
+        margin: 0
+        font-size: 14px
+        line-height: 19px
+        margin-bottom: 7px
+      .footer_phone
+        color: $default_color
+        font-size: 23px
+        display: block
+        clear: both
+        margin-bottom: 23px
+    .right-side
+      float: right
+      width: 590px
+      div
+        width: 185px
+        float: left
+        p
+          margin: 0
+          margin-top: 7px
+          font-size: 15px
+          font-weight: bold
+          margin-bottom: 12px
+        a
+          color: $default_color
+          font-size: 12px
+          width: 100%
+          display: block
+          margin: 3px 0
+          display: block
+          float: left
+          margin-right: 5px
+          &:hover
+            color: $link_color_hover
+  #footer-bottom-country
+    width: 100%
+    margin-top: 20px
+    margin-bottom: 22px
+    p
+      margin: 0
+      margin-left: 20px
+      font-size: 12px
+      margin-bottom: 15px
+    div
+      overflow: hidden
+      margin-left: 20px
+      a
+        font-size: 12px
+        color: $default_color
+        display: block
+        float: left
+        margin-right: 5px
+        margin-bottom: 5px
+        &:hover
+          color: $link_color_hover
+        &:nth-child(2n)
+          line-height: 8px
+          cursor: default !important
+
+  #footer-bottom-line
+    width: 100%
+    text-align: right
+    font-size: 12px
+    color: #ffffff
+    background: #26a0ad
+    padding: 8px 0
+    span
+      padding-right: 20px
+.find
+  position: relative
+  input[type=text]
+    width: 120px
+    background: #ffffff
+    @include radius(15px)
+    margin: 10px 20px
+  input[type=submit]
+    position: absolute
+    top: 17px
+    right: 29px
+    width: 13px
+    height: 13px
+    border: none
+    background: transparent url('/assets/magnifier.png') left top no-repeat
+    &:hover
+      background-position: right top
+.btn
+  position: relative
+  display: inline-block
+  padding: 3px 20px
+  margin-bottom: 0
+  font-size: 13px
+  line-height: 19px
+  color: $link_color
+  text-align: center
+  vertical-align: middle
+  cursor: pointer
+  border: none !important
+  @include radius(15px)
+  @include gradient_vertical(#0491a1, #0b7884)
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: $link_color_hover
+    text-decoration: none
+    @include gradient_vertical(#0092a3, #018391)
+  &:active
+    @include gradient_vertical(#0b7884, #0491a0)
+  i
+    font-size: 16px
+    float: left
+.btn-blue
+  @include gradient_vertical(#0491a1, #0b7884)
+.btn-red
+  @include gradient_vertical(#b93359, #78042f)
+  &:focus,
+  &:hover
+    color: #f388a7
+    @include gradient_vertical(#cc426a, #810332)
+  &:active
+    @include gradient_vertical(#73012c, #bb345a)
+.btn-link,
+.btn-text
+  background: transparent
+  text-decoration: underline
+  @include radius(0)
+  &:hover
+    background: transparent
+    text-decoration: none
+.btn-nopadding
+  padding-left: 0
+  padding-right: 0
+span.bubble
+  position: absolute
+  top: -1px
+  right: -6px
+  display: block
+  padding: 0px 3px
+  background: rgb(140, 0, 53)
+  color: rgb(255, 255, 255)
+  font-size: 10px
+  height: 13px
+  overflow: hidden
+  line-height: 12px
+  @include radius(3px)
+
+input[type=text],
+input[type=password],
+input[type=mail]
+  width: 100%
+  height: 25px
+  line-height: 26px
+  padding: 0 12px
+  font-size: 14px
+  border: none
+  @include radius(5px)
+  background: #018d9d
+  color: $link_color
+  &:focus
+    background: #ffffff
+    color: $default_color
+i.icon-man
+  width: 12px
+  height: 12px
+  float: left
+  background: url('/assets/icon-man.png') top left no-repeat
+  margin-top: 2px
+  margin-right: 10px
+i.icon-mail
+  width: 13px
+  height: 9px
+  float: left
+  background: url('/assets/icon-mail.png') top left no-repeat
+  margin-top: 4px
+  margin-left: 8px
+i.icon-mail-big
+  width: 17px
+  height: 12px
+  float: left
+  background: url('/assets/icon-mail-big.png') top left no-repeat
+  margin-top: 3px
+
+.pull-left
+  float: left
+.pull-right
+  float: right
+.clear
+  width: 100%
+  overflow: hidden
+  height: 0
+  border: none
+  clear: both
+.fs25
+  font-size: 25px
+.h2_5
+  font-size: 26px !important
+  border-bottom: none !important
+  padding-bottom: 0 !important
+.btn-ellips,
+.ui-datepicker-prev,
+.ui-datepicker-next
+  display: inline-block
+  width: 30px
+  height: 30px
+  background: rgb(237, 237, 237)
+  @include radius(50px)
+  color: $default_color
+  cursor: pointer
+  &:hover
+    width: 28px
+    height: 28px
+    border: 1px solid $border_color
+    background: #ffffff
+  span
+    display: block
+    width: 6px
+    height: 10px
+    position: relative
+    top: 50%
+    left: 50%
+    margin-left: -3px
+    margin-top: -5px
+
+.btn-ellips-left,
+.ui-datepicker-prev
+  span
+    background: url("/assets/left-arrow.png") left top no-repeat
+.btn-ellips-right,
+.ui-datepicker-next
+  span
+    background: url("/assets/right-arrow.png") left top no-repeat
+.btn-ellips-link
+  background: none !important
+  border: none  !important
+  width: 30px  !important
+  height: 30px  !important
+  margin-right: 15px
+  span
+    display: block
+    width: 100%
+    position: relative
+    top: 6px
+    left: 0
+    margin-top: 0px
+    margin-left: 0
+    font-size: 14px
+    font-weight: bold
+    text-align: center
+.curent
+  width: 28px !important
+  height: 28px !important
+  border: 1px solid $border_color !important
+  background: #ffffff !important
+  color: $link_color_hover !important

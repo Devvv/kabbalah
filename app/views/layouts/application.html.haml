@@ -1,0 +1,263 @@
+!!!
+%html
+  %head
+    %title Kabbalah
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #box
+      #header
+        .container
+          .top
+            %a.btn.btn-link{ :href => '#', :title => '' }
+              %i.icon-man
+              Личный кабинет
+            %a.btn.btn-link.btn-nopadding{ :href => '#', :title => '' }
+              %i.icon-mail-big
+              %span.bubble 4
+            .auth-line
+              %a.btn.btn-link{ :href => '#', :title => '' }
+                Регистрация
+              %a.btn.btn-link.delimer
+                |
+              %a.btn.btn-link.forgot_password{ :href => '#', :title => '' }
+                Забыли пароль
+              %form
+                %input{:type => 'text', :value => "", :placeholder => 'Логин', :name => ''}
+                %input{:type => 'password', :value => "", :placeholder => 'Пароль', :name => ''}
+              %a.btn{ :href => '#', :title => '' }
+                Войти
+          %a.logo{ :href => '/', :title => '' }
+            %img{:src => '/assets/logo.png', :width => '353', :height => '85', :alt => 'Вернуться на главную страницу' }
+          .callback_block
+            %a{ :href => 'callto:+77777777777', :title => 'Позвонить по номеру 88888888888' }
+              +7 (495) 504 10 12
+            %a{ :href => 'mailto:test@test.ru', :title => 'Отправить письмо test@test.ru' }
+              Обратная связь
+              %i.icon-mail
+        %ul.header-menu
+          %li
+            %a{ :href => '', :title => '' }
+              мудрость каббалы
+            %ul
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 1
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 2
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 3
+          %li
+            %a{ :href => '', :title => '' }
+              о нас
+            %ul
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 1
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 2
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 3
+          %li
+            %a{ :href => '/calendar/index', :title => '' }
+              онлайн изучение
+            %ul
+              %li
+                %a{ :href => '/online_lerning/introductory', :title => '' }
+                  Вводный курс
+              %li
+                %a{ :href => '/online_lerning/course', :title => '' }
+                  Полный курс
+              %li
+                %a{ :href => '/online_lerning/advanced_course', :title => '' }
+                  Расширенный курс
+
+          %li
+            %a{ :href => '', :title => '' }
+              блоги учителей
+            %ul
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 1
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 2
+              %li
+                %a{ :href => '', :title => '' }
+                  Подменю 3
+          %li
+            %a{ :href => '', :title => '' }
+              магазин
+            %ul
+              %li
+                %a{ :href => '#', :title => '' }
+                  Подменю 1
+              %li
+                %a{ :href => '#', :title => '' }
+                  Подменю 2
+              %li
+                %a{ :href => '#', :title => '' }
+                  Подменю 3
+          %li.find
+            %input{:type => 'text', :value => "", :placeholder => 'Поиск', :name => ''}
+            %input{:type => 'submit', :value => "", :placeholder => '', :name => ''}
+        .clear
+      #body
+        = yield
+      .clear
+      #footer_banner
+        %img{:src => '/assets/footer-banner.jpg', :width => '978', :height => '100', :alt => '' }
+      #footer
+        .left-side
+          .find
+            %input{:type => 'text', :value => "", :placeholder => 'Поиск', :name => ''}
+            %input{:type => 'submit', :value => "", :placeholder => '', :name => ''}
+          %p
+            Московский Каббала Центр
+            %br
+            г. Москва, ул. Мясницкая д. 13, стр. 11
+          %a.footer_phone{ :href => 'callto:84955041012', :title => 'Позвонить по номеру 8 (495) 504 10 12' }
+            8 (495) 504 10 12
+          %a.logo{ :href => '/', :title => '' }
+            %img{:src => '/assets/footer-logo.png', :width => '222', :height => '55', :alt => 'Вернуться на главную страницу' }
+        .right-side
+          %div
+            %p Мудрость Каббалы
+            %a{ :href => '#', :title => '' }
+              Что такое Каббала
+            %a{ :href => '#', :title => '' }
+              Астрология
+            %a{ :href => '#', :title => '' }
+              Отношения
+            %a{ :href => '#', :title => '' }
+              Сны
+            %a{ :href => '#', :title => '' }
+              Страхи
+            %a{ :href => '#', :title => '' }
+              Любовь
+            %a{ :href => '#', :title => '' }
+              Смысл жизни
+            %a{ :href => '#', :title => '' }
+              Зоар
+            %a{ :href => '#', :title => '' }
+              Красная нить
+            %a{ :href => '#', :title => '' }
+              72 Имени Бога
+          %div
+            %p О нас
+            %a{ :href => '#', :title => '' }
+              История Каббала Центра
+            %a{ :href => '#', :title => '' }
+              Московский Каббала Центр
+            %a{ :href => '#', :title => '' }
+              Расписание
+            %a{ :href => '#', :title => '' }
+              Учителя
+            %a{ :href => '#', :title => '' }
+              Контакты
+          %div
+            %p Онлайн Изучение
+            %a{ :href => '#', :title => '' }
+              Вводная лекция
+            %a{ :href => '#', :title => '' }
+              Программы обучения
+            %a{ :href => '#', :title => '' }
+              Углубленное изучение
+            %a{ :href => '#', :title => '' }
+              Персональный учитель
+            %a{ :href => '#', :title => '' }
+              Kabbalah Tv
+          %div
+            %p Блоги учителей
+          %div
+            %p Магазин
+      #footer-bottom-country
+        %p
+          Kabbalah Центр в Других Странах
+        %div
+          %a{:href=>"#", :title => ''}
+            USA
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Canada
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Europe / Africa
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            U.K
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            France
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Germany
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Hungary
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Italy
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Netherlands
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Poland
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Portugal
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Spain
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Moscow
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Russia
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Ukraine
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Israel קבלה
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            South Africa
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Australia
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Brazil
+          %a{:href=>"javascript:;", :title => ''}
+            \. 
+          %a{:href=>"#", :title => ''}
+            Mexico
+      #footer-bottom-line
+        %span
+          © 2013 Каббала центр
