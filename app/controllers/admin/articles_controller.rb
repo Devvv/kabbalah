@@ -1,10 +1,10 @@
-class Admin::UsersController < AdminController
+class Admin::ArticlesController < AdminController
 
   before_filter :setup
 
   def setup
-    @model = User
-    @name = "user"
+    @model = Article
+    @name = "article"
   end
 
   def index

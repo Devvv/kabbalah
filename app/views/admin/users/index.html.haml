@@ -1,0 +1,25 @@
+%a.btn{href: send("new_admin_" + @name + "_path")} Добавить
+%table.table
+  %thead
+    %th #
+    %th Заголовок
+    %th Активность
+    %th Текст
+    %th Фото
+    %th Действия
+  %tbody
+    - @items.each do |item|
+      %tr
+        %td= item.id
+        %td= item.name
+        %td= item.active == 1 ? "<font color=green>Да</font>".html_safe : "<font color=red>Нет</font>".html_safe
+        %td= strip_tags(item.text.to_s)[0..255].html_safe + "..."
+        %td= image_tag item.photo.url, :width => 50 if item.photo.present?
+        %td
+          %a.btn{:href => send("edit_admin_" + @name + "_path", item)}
+            %i.icon-edit
+          = link_to send("admin_" + @name + "_path", item), :class => "btn", :method => :delete, :confirm => "Удалить?" do
+            %i.icon-remove
+  %tfoot
+%a.btn{href: send("new_admin_" + @name + "_path")} Добавить
+

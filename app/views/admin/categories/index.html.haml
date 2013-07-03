@@ -1,0 +1,28 @@
+%ul.nav.nav-tabs
+  %li
+    %a{:href => admin_partners_path} Партнеры
+  %li.active
+    %a{:href => "javascript:;"} Категории
+.tab-content
+  .tab-pane.active
+  %a.btn{href: send("new_admin_" + @name + "_path")} Добавить
+  %table.table
+    %thead
+      %th #
+      %th Заголовок
+      %th Текст
+      %th Действия
+    %tbody
+      - @items.each do |item|
+        %tr
+          %td= item.id
+          %td= item.name
+          %td= strip_tags(item.text)[0..255].html_safe + "..."
+          %td
+            %a.btn{:href => send("edit_admin_" + @name + "_path", item)}
+              %i.icon-edit
+            = link_to send("admin_" + @name + "_path", item), :class => "btn", :method => :delete, :confirm => "Удалить?" do
+              %i.icon-remove
+    %tfoot
+  %a.btn{href: send("new_admin_" + @name + "_path")} Добавить
+

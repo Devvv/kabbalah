@@ -1,0 +1,31 @@
+= form_for [:admin, @item], :html => {:class => "form-horizontal"} do |f|
+
+  .control-group
+    %label.control-label Заголовок
+    .controls
+      = f.text_field :name, :class => "item-name"
+
+  .control-group
+    %label.control-label Код (URL)
+    .controls
+      = f.text_field :code, :class => "item-name"
+
+  .control-group
+    %label.control-label Активность
+    .controls
+      = f.check_box :active
+
+  .control-group
+    %label.control-label Текст
+    .controls
+      = f.text_area :text, :class => "editor"
+
+  .form-actions
+    -if @item.new_record?
+      %input.btn.btn-success{:name => "save", :type => "submit", :value => "Создать"}
+    -else
+      %input.btn.btn-success{:name => "save", :type => "submit", :value => "Изменить"}
+    %input.btn.btn-primary{:name => "apply",:type => "submit", :value => "Применить"}
+    = link_to "Отмена", send("admin_" + @name + "s_path"), :class => "btn"
+
+

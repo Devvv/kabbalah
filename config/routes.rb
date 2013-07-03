@@ -1,5 +1,7 @@
 Kabbalah::Application.routes.draw do
 
+  devise_for :users
+
   get "online_lerning/course"
 
   get "online_lerning/advanced_course"
@@ -10,8 +12,17 @@ Kabbalah::Application.routes.draw do
 
   get "index/index"
 
+  get "admin" => "admin#index"
   namespace :admin do
     resources :users
+    resources :articles
+    #resources :partners
+    #resources :categories
+    #resources :specials
+    #resources :events
+    #resources :pages
+    #resources :photos
+    #resources :banners
   end
 
   root :to => "index#index"
