@@ -10,6 +10,7 @@ $link_color_hover: #26a0ad
 $link_color_hover_header: #87e0ea
 $border_color: #e6e6e6
 
+//$sans: 'Open Sans', sans-serif
 $sans: sans-serif
 $serif: Georgia
 
@@ -29,7 +30,8 @@ body
   //background: url('/assets/demo/home.jpg') center top no-repeat
   //background: url('/assets/demo/calendar.jpg') center top no-repeat
   //background: url('/assets/demo/online_enduc.jpg') center top no-repeat
-
+  //background: url('/assets/demo/online_detail.jpg') center top no-repeat
+  font-family: $sans
 a
   color: $link_color
   text-decoration: none
@@ -84,7 +86,7 @@ textarea
         .btn:first-child
           float: left
         .btn:last-child
-          margin-right: 19px
+          margin-right: 20px
           float: right
         .auth-line
           float: right
@@ -116,7 +118,7 @@ textarea
         float: right
         margin-top: 65px
         width: 165px
-        margin-right: 30px
+        margin-right: 20px
         a
           display: block
           width: 100%
@@ -133,7 +135,7 @@ textarea
 
     .header-menu
       width: 100%
-      background: #dedede
+      @include gradient_vertical(#e3e3e3, #d6d6d6)
       list-style: none
       margin: 0
       padding: 0
@@ -145,7 +147,7 @@ textarea
         &:last-child
           border: none
         a
-          padding: 14px 27px
+          padding: 14px 20px
           text-transform: uppercase
           font-size: 14px
           display: block
@@ -153,6 +155,9 @@ textarea
           &:hover
             text-decoration: none
             color: $link_color_hover
+        .active
+          background: #d7d7d7
+          color: $link_color_hover
         ul
           display: none
           position: absolute
@@ -275,6 +280,16 @@ textarea
         margin: 0
         margin-bottom: 40px
         font-family: $serif
+      .p-dop-text
+        font-size: 18px
+        clear: both
+        width: 100%
+        margin-bottom: 40px
+        font-family: $sans
+      .images_box
+        overflow: hidden
+        width: 100%
+        margin-bottom: 20px
       .content_banner
         display: block
         overflow: hidden
@@ -478,6 +493,61 @@ textarea
               width: 100%
           .calendar_event
             margin-bottom: 28px
+      table
+        margin: 0
+        padding: 0
+        width: 100%
+        tr
+          width: 100%
+          td
+            position: relative
+            vertical-align: middle
+            padding-top: 20px
+            padding-bottom: 10px
+            padding-right: 20px
+            &:first-child
+              padding-left: 20px
+      .table-striped
+        tr:nth-child(odd)
+          td
+            background: #f1f2f2
+      .table-buy-singl-course
+        tr
+          td
+            padding-bottom: 20px
+          .buy_singl_course
+            text-align: right
+      .table-buy-all-course
+        tr
+          td
+            vertical-align: top
+          td.img
+            width: 223px
+          td
+            .img
+              overflow: hidden
+              width: 223px
+              height: 140px
+              img
+                width: 100%
+            >div
+              margin-bottom: 10px
+              width: 100%
+            .name
+              font-weight: 600
+              font-size: 24px
+            .lessons
+              font-size: 14px
+            .tottal
+              font-size: 18px
+              text-align: right
+              margin-top: 6px
+            .buy_course
+              position: absolute
+              right: 20px
+              bottom: 10px
+              width: auto
+              text-align: right
     .right_side
       float: right
       width: 200px
@@ -520,11 +590,27 @@ textarea
           width: 100%
           overflow: hidden
           height: 400px
-
+        p
+          width: 100%
+          font-size: 21px
+          font-family: $sans
+          color: #bcbec0
+          font-weight: normal
+          margin-top: 28px
+          margin-bottom: 10px
+          display: block
+          clear: both
       .right_side
-        height: 400px
+        height: auto !important
         margin-bottom: 0 !important
         overflow: visible
+        padding: 0
+        margin: 0
+        margin-right: 20px
+        position: absolute
+        right: 0
+        top: 20px
+        bottom: 20px
         .content_slider
           width: 100%
           margin-bottom: 0 !important
@@ -579,6 +665,7 @@ textarea
       float: left
       width: 270px
       margin-left: 20px
+
       .find
         margin-bottom: 26px
         input:first-child
@@ -659,15 +746,17 @@ textarea
       padding-right: 20px
 .find
   position: relative
+  margin: 10px 20px
   input[type=text]
-    width: 120px
+    width: 292px
     background: #ffffff
     @include radius(15px)
-    margin: 10px 20px
+
+    @include border_box()
   input[type=submit]
     position: absolute
-    top: 17px
-    right: 29px
+    top: 6px
+    right: 6px
     width: 13px
     height: 13px
     border: none
@@ -786,6 +875,18 @@ i.icon-mail-big
   font-size: 26px !important
   border-bottom: none !important
   padding-bottom: 0 !important
+.border-none
+  border-bottom: none !important
+.padding-bottom_0
+  padding-bottom: 0 !important
+.margin_b_10
+  margin-bottom: 10px !important
+.margin_b_30
+  margin-bottom: 30px !important
+.margin_b_50
+  margin-bottom: 50px !important
+
+.margin_b_10
 .btn-ellips,
 .ui-datepicker-prev,
 .ui-datepicker-next

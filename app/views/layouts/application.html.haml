@@ -2,6 +2,7 @@
 %html
   %head
     %title Kabbalah
+    //%link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic", :rel => "stylesheet", :type => "text/css"}/
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -64,12 +65,12 @@
                 %a{ :href => '', :title => '' }
                   Подменю 3
           %li
-            %a{ :href => '/calendar/index', :title => '' }
+            %a.active{ :href => '/calendar/index', :title => '' }
               онлайн изучение
             %ul
               %li
                 %a{ :href => '/online_lerning/introductory', :title => '' }
-                  Вводный курс
+                  Гостевой вечер
               %li
                 %a{ :href => '/online_lerning/course', :title => '' }
                   Полный курс
@@ -79,7 +80,7 @@
 
           %li
             %a{ :href => '', :title => '' }
-              блоги учителей
+              блоги
             %ul
               %li
                 %a{ :href => '', :title => '' }
