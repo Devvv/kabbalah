@@ -9,23 +9,24 @@
 
     .container
 
-      .navbar
+      .navbar.navbar-inverse.navbar-fixed-top
         .navbar-inner
-          %a.brand{:href => "/"}
-            Kabbalah
-          %ul.nav
-            %li.divider-vertical
-            %li{:class => params[:controller] == "admin/users" ? "active" : ""}
-              %a{:href => admin_users_path} Пользователи
-            %li.divider-vertical
-            -#%li{:class => params[:controller] == "admin/pages" ? "active" : ""}
-              %a{:href => admin_pages_path} Страницы
-            -#%li.divider-vertical
-            %li{:class => params[:controller] == "admin/photos" ? "active" : ""}
-              %a{:href => admin_articles_path} Новости
-            %li.divider-vertical
-            -#%li{:class => params[:controller] == "admin/banners" ? "active" : ""}
-              %a{:href => admin_banners_path} Баннеры
+          .container
+            %a.brand{:href => "/"}
+              Kabbalah
+            %ul.nav
+              %li.divider-vertical
+              %li{:class => params[:controller] == "admin/users" ? "active" : ""}
+                %a{:href => admin_users_path} Пользователи
+              %li.divider-vertical
+              -#%li{:class => params[:controller] == "admin/pages" ? "active" : ""}
+                %a{:href => admin_pages_path} Страницы
+              -#%li.divider-vertical
+              %li{:class => params[:controller] == "admin/articles" ? "active" : ""}
+                %a{:href => admin_articles_path} Новости
+              %li.divider-vertical
+              -#%li{:class => params[:controller] == "admin/banners" ? "active" : ""}
+                %a{:href => admin_banners_path} Баннеры
 
       .container-fluid.well.content-inner
         .row-fluid
