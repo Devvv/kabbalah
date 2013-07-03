@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/kabbalah.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="kabbalah.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1372879375368" ignored="false" />
+    <file path="/Dummy.txt" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1372879611350" ignored="false" />
     <file path="/database.yml" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1371757874691" ignored="false" />
     <file path="$PROJECT_DIR$/../base_control/base_control.gemspec" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1371977187562" ignored="false" />
     <file path="/base_control.gemspec" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1371977187562" ignored="false" />
@@ -58,6 +67,7 @@
     <file path="/20130703114433_add_active_to_tables.rb" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1372851905184" ignored="false" />
     <file path="/20130703114547_add_defaults.rb" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1372852076889" ignored="false" />
     <file path="/index.html.haml" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1372852137313" ignored="false" />
+    <file path="/.gitignore" changelist="3b5e7546-689b-4daf-a0e5-4854a6ff7fda" time="1372880124391" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,10 +110,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130703114252_add_fields_to_users.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20130703114252_add_fields_to_users.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20130703114252_add_fields_to_users.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="45" selection-start="140" selection-end="140" vertical-scroll-proportion="0.115384616">
+            <state line="3" column="45" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="124" selection-start="486" selection-end="486" vertical-scroll-proportion="0.528757">
               <folding />
             </state>
           </provider>
@@ -163,15 +182,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.css.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/admin.css.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -190,7 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/admin.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/users/password_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -206,6 +215,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20130703114433_add_active_to_tables.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130703114547_add_defaults.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/index.html.haml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -869,7 +879,11 @@
       <created>1372879378189</created>
       <updated>1372879378189</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rails 4">
+      <created>1372879615573</created>
+      <updated>1372879615573</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -885,7 +899,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21355931" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21355931" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -958,13 +972,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="146" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/admin.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="83" selection-start="923" selection-end="923" vertical-scroll-proportion="-16.25">
@@ -1065,7 +1072,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130703114252_add_fields_to_users.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="45" selection-start="140" selection-end="140" vertical-scroll-proportion="0.115384616">
+        <state line="3" column="45" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="124" selection-start="486" selection-end="486" vertical-scroll-proportion="0.528757">
           <folding />
         </state>
       </provider>
