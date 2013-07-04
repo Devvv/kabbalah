@@ -1,0 +1,16 @@
+ru:
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "..."
+  control: "Управление"
+  creating: "Создание"
+  editing: "Редактирование"
+  article: "новости"
+  articles: "Новости"
+  user: "пользователя"
+  users: "Пользователи"
+  logout: "Выход"
