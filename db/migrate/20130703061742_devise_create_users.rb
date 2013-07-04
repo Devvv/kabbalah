@@ -1,8 +1,6 @@
 class DeviseCreateUsers < ActiveRecord::Migration
   def self.up
-    create_table(:users) do |t|
-
-    end
+    create_table :users
   end
 
   def self.down

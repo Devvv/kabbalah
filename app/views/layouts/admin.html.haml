@@ -15,72 +15,27 @@
             %a.brand{:href => "/"}
               Kabbalah
             %ul.nav
-              %li.divider-vertical
+              -#%li.divider-vertical
               %li{:class => params[:controller] == "admin/users" ? "active" : ""}
-                %a{:href => admin_users_path} Пользователи
-              %li.divider-vertical
+                %a{:href => admin_users_path}= t(:users)
+              -#%li.divider-vertical
               -#%li{:class => params[:controller] == "admin/pages" ? "active" : ""}
                 %a{:href => admin_pages_path} Страницы
               -#%li.divider-vertical
               %li{:class => params[:controller] == "admin/articles" ? "active" : ""}
-                %a{:href => admin_articles_path} Новости
-              %li.divider-vertical
+                %a{:href => admin_articles_path}= t(:articles)
+              -#%li.divider-vertical
               -#%li{:class => params[:controller] == "admin/banners" ? "active" : ""}
                 %a{:href => admin_banners_path} Баннеры
+              %li.logout
+                = link_to destroy_user_session_path do
+                  %i.icon-share.icon-white
+                  = t(:logout)
 
-      .container-fluid.well.content-inner
-        .row-fluid
-          .span12
-            = yield
+      = render "breadcrumbs"
+      = yield
 
-        %hr
-        -#.row-fluid.footer
-          .span3
-            %h4 Информация
-            %ul
-              %li
-                %a{:href => "/"} Главная
-              %li
-                %a{:href => "/about"} О нас
-              %li
-                %a{:href => "/gallery"} Фотогалерея
-              %li
-                %a{:href => "/contacts"} Контакты
-          .span3
-            %h4 Наши разделы
-            %ul
-              %li
-                %a{:href => "/partners"} Партнеры
-              %li
-                %a{:href => "/news"} Новости
-              %li
-                %a{:href => "/specials"} Акции и спецпредложения
-              %li
-                %a{:href => "/rent"} Аренда
-          .span3.social
-            %h4.logo-title Присоеденяйтесь к нам
-            %a{:href => "#"}
-              = image_tag "vk.png"
-            %a{:href => "#"}
-              = image_tag "ok.png"
-            %a{:href => "#"}
-              = image_tag "facebook.png"
-            %a{:href => "#"}
-              = image_tag "twitter.png"
-            %a{:href => "#"}
-              = image_tag "gplus.png"
-          .span3
-            .company_info
-              %h4.title
-                %strong ТЦ Район
-              %p
-                г. Владимир
-                %br
-                ул. Добросельская 169 Б
-                %br
-                %i.icon-ok-circle
-                %a{:href => 'call:+78008888888', :title => ''} 8 (800) 888 88-88
-      .container-fluid
-        .row-fluid
-          .span12
-            %small Copyright © 2013
+      %hr
+      
+      .container
+        %small Copyright © 2013

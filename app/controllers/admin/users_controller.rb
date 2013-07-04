@@ -2,11 +2,6 @@ class Admin::UsersController < AdminController
 
   before_filter :setup
 
-  def setup
-    @model = User
-    @name = "user"
-  end
-
   def index
     @items = @model.all
   end
@@ -25,7 +20,7 @@ class Admin::UsersController < AdminController
 
   def update
     @item = @model.find(params[:id])
-    @item.update_attributes params[@name]
+    @item.update item_params
     if params[:save]
       redirect_to send("admin_" + @name + "s_path")
     else
@@ -34,7 +29,7 @@ class Admin::UsersController < AdminController
   end
 
   def create
-    @item = @model.create params[@name]
+    @item = @model.create item_params
     if params[:save]
       redirect_to send("admin_" + @name + "s_path")
     else
@@ -45,6 +40,18 @@ class Admin::UsersController < AdminController
   def destroy
     @model.find(params[:id]).destroy
     redirect_to send("admin_" + @name + "s_path")
+  end
+  
+  private
+
+  def setup
+    @model = User
+    @name = "user"
+    @breads = [[t(:control), '/admin'], [t(@name+"s")]]
+  end
+
+  def item_params
+    params.require(@name).permit!
   end
 
 end
