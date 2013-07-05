@@ -11,22 +11,22 @@
       #header
         .container
           .top
-            %a.btn.btn-link{ :href => '#', :title => '' }
+            %a.btn.btn-link.btn-link-white{ :href => '#', :title => '' }
               %i.icon-man
               Личный кабинет
             %a.btn.btn-link.btn-nopadding{ :href => '#', :title => '' }
               %i.icon-mail-big
               %span.bubble 4
             .auth-line
-              %a.btn.btn-link{ :href => '#', :title => '' }
+              %a.btn.btn-link.btn-link-white{ :href => '#', :title => '' }
                 Регистрация
-              %a.btn.btn-link.delimer
+              %a.btn.btn-link.delimer.btn-link-white
                 |
-              %a.btn.btn-link.forgot_password{ :href => '#', :title => '' }
+              %a.btn.btn-link.forgot_password.btn-link-white{ :href => '#', :title => '' }
                 Забыли пароль
               %form
-                %input{:type => 'text', :value => "", :placeholder => 'Логин', :name => ''}
-                %input{:type => 'password', :value => "", :placeholder => 'Пароль', :name => ''}
+                %input.input-blue{:type => 'text', :value => "", :placeholder => 'Логин', :name => ''}
+                %input.input-blue{:type => 'password', :value => "", :placeholder => 'Пароль', :name => ''}
               %a.btn{ :href => '#', :title => '' }
                 Войти
           %a.logo{ :href => '/', :title => '' }
@@ -52,7 +52,7 @@
                 %a{ :href => '', :title => '' }
                   Подменю 3
           %li
-            %a{ :href => '', :title => '' }
+            %a{ :href => '/about/index', :title => '' }
               о нас
             %ul
               %li
@@ -262,3 +262,25 @@
       #footer-bottom-line
         %span
           © 2013 Каббала центр
+
+#back_bg
+#popup
+  .popup_inner
+
+    #login
+      .popup_name
+        Вход в личный кабинет
+      %form.form.form-vertical
+        .form-line
+          %input{:type => 'text', :value => "", :placeholder => 'E-mail', :name => ''}
+        .form-line
+          %input{:type => 'text', :value => "", :placeholder => 'Пароль', :name => ''}
+        .form-line
+          %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - реистрации'}
+            Регистрация
+          %a.btn.btn-link.pull-left.delimer
+          %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - я забыл пароль'}
+            Я забыл пароль
+          %a.btn.pull-right.btn-light-blue{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
+            Войти
+  %a.popup_close{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Закрыть'}

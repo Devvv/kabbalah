@@ -1,5 +1,6 @@
 Kabbalah::Application.routes.draw do
 
+  get "about/index"
   devise_for :users
 
   get "online_lerning/course"

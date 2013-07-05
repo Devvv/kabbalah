@@ -102,7 +102,9 @@ textarea
           display: block
           float: left
           input
-            width: 186px
+            width: 210px
+            height: 25px
+            line-height: 14px
             &:first-child
               margin-right: 5px
       .logo
@@ -468,12 +470,10 @@ textarea
               margin-bottom: 20px
               input[type=text],
               input[type=mail]
-                width: 254px
+                width: 278px
                 float: left
-                background: #f5f5f5
                 margin-right: 11px
                 padding: 1px 12px
-                border: 1px solid $border_color
               input[type=submit]
                 padding-top: 5px
                 padding-bottom: 5px
@@ -667,15 +667,16 @@ textarea
       margin-left: 20px
 
       .find
+        margin: 0
         margin-bottom: 26px
         input:first-child
           border: 1px solid $border_color
           margin: 0
-          width: 73%
+          width: 218px
         input[type=submit]
           left: 199px
           right: auto
-          top: 8px
+          top: 6px
       p
         margin: 0
         font-size: 14px
@@ -744,15 +745,82 @@ textarea
     padding: 8px 0
     span
       padding-right: 20px
+
+#back_bg
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  //background: rgba(0, 0, 0, 0.2)
+  background: url('/assets/demo/popup_login.png') top left no-repeat
+  z-index: 2000
+#popup
+  position: fixed
+  top: 0
+  left: 50%
+  margin-left: -164px
+  width: 328px
+  background: rgb(255, 255, 255)
+  @include radius(10px)
+  padding: 20px
+  z-index: 2500
+  .popup_inner
+    >div
+      width: 100%
+      .popup_name
+        font-family: Tahoma
+        width: 100%
+        padding-bottom: 14px
+        margin-bottom: 19px
+        margin-top: 4px
+        font-size: 24px
+        border-bottom: 1px solid $border_color
+        color: #262626
+      .form-line
+        .btn
+          font-family: Tahoma
+  a.popup_close
+    position: absolute
+    top: 10px
+    right: 10px
+    width: 21px
+    height: 21px
+    background: url('/assets/ellips_close.png') left top no-repeat
+    &:hover
+      background-position: right top
+
+
+.form.form-vertical
+  width: 100%
+  display: table
+  .form-line
+    display: table
+    width: 100%
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+    .delimer
+      width: 0px
+      padding: 15px 10px !important
+    .btn-link
+      padding: 7px 0px
+      font-size: 12px
+    .btn:last-child
+      padding: 6px 43px
+
 .find
   position: relative
   margin: 10px 20px
   input[type=text]
     width: 292px
+    height: 25px
+    line-height: 14px
     background: #ffffff
+    border: none
     @include radius(15px)
-
-    @include border_box()
   input[type=submit]
     position: absolute
     top: 6px
@@ -790,6 +858,8 @@ textarea
     float: left
 .btn-blue
   @include gradient_vertical(#0491a1, #0b7884)
+.btn-light-blue
+  @include gradient_vertical(#15a4b4, #0b7985)
 .btn-red
   @include gradient_vertical(#b93359, #78042f)
   &:focus,
@@ -803,9 +873,14 @@ textarea
   background: transparent
   text-decoration: underline
   @include radius(0)
+  color: #000000
+  text-decoration: underline
   &:hover
     background: transparent
     text-decoration: none
+.btn-link-white
+  color: #ffffff
+  text-decoration: underline
 .btn-nopadding
   padding-left: 0
   padding-right: 0
@@ -827,17 +902,31 @@ input[type=text],
 input[type=password],
 input[type=mail]
   width: 100%
-  height: 25px
+  height: 29px
   line-height: 26px
   padding: 0 12px
   font-size: 14px
   border: none
   @include radius(5px)
-  background: #018d9d
-  color: $link_color
+  @include border-box()
+  background: rgb(245, 245, 245)
+  color: #000000
+  border: 1px solid rgb(230, 230, 230)
   &:focus
     background: #ffffff
     color: $default_color
+    outline: none
+input[type=text].input-blue,
+input[type=password].input-blue,
+input[type=mail].input-blue
+  background: #018d9d
+  color: $link_color
+  border-color: #018d9d
+  &:focus
+    background: #ffffff
+    color: $default_color
+    border-color: rgb(230, 230, 230)
+
 i.icon-man
   width: 12px
   height: 12px
