@@ -1,5 +1,6 @@
 .video_container
   .left_side
+
     .video_box
 
       %iframe{:allowfullscreen => "", :frameborder => "0", :height => "400",  :width => "720", :src => "//www.youtube.com/embed/0YId3OsH4fE?list=UUYFg-IcHlYUCbB3-qz7-24w"}
@@ -180,14 +181,4 @@
   -#            |
   -#          5 уроков
 .right_side
-  %a{:href => '#', :title => 'mobile app'}
-    %img{:src => '/assets/mobile_app.jpg', :alt => ''}
-  %div
-    %img{:src => '/assets/banner1.jpg', :alt => ''}
-  .social-link
-    %a.f{:href => '#', :title => ''}
-    %a.t{:href => '#', :title => ''}
-    %a.v{:href => '#', :title => ''}
-
-  %a{:href => '#', :title => 'mobile app'}
-    %img{:src => '/assets/banner2.jpg', :alt => ''}
+  =render 'public_right_banner_column'

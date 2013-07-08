@@ -83,15 +83,5 @@
       .calendar_event
         #calendar
 .right_side
-  %a{:href => '#', :title => 'mobile app'}
-    %img{:src => '/assets/mobile_app.jpg', :alt => ''}
-  %div
-    %img{:src => '/assets/banner1.jpg', :alt => ''}
-  .social-link
-    %a.f{:href => '#', :title => ''}
-    %a.t{:href => '#', :title => ''}
-    %a.v{:href => '#', :title => ''}
-
-  %a{:href => '#', :title => 'mobile app'}
-    %img{:src => '/assets/banner2.jpg', :alt => ''}
+  =render 'public_right_banner_column'
 

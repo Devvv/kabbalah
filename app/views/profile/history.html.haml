@@ -1,0 +1,68 @@
+.left_side
+  %h3.margin_b_0
+    История заказов
+    %a{:href => 'javascript:;', :title => ''}
+      по цене &uarr;
+    %a{:href => 'javascript:;', :title => ''}
+      по дате &darr;
+    %a.text{:href => 'javascript:;', :title => ''}
+      Сортировать
+  .clear
+  .list.margin_b_70
+    .line
+      .history
+        .left
+          %p вчера в 12:31
+        .center
+          %p
+            АУДИО
+          %p
+            %a{:href => 'javascript:;', :title => ''}
+              Каббала по пятницам – (1) Суть духовной работы 4.11
+        .right
+          %p
+            19 600 р.
+          %p
+            5 Уроков
+    .line
+      .history
+        .left
+          %p 21 августа 2013
+          %p 12:31
+        .center
+          %p
+            ВИДЕО
+          %p
+            %a{:href => 'javascript:;', :title => ''}
+              Каббала по пятницам – (1) Суть духовной работы 4.11
+        .right
+          %p
+            19 600 р.
+          %p
+            5 Уроков
+  .clear
+  .pagination.pagination-left
+    %a.btn-ellips.btn-ellips-left.pull-left{:href => "#", :title => ""}
+      %span
+    %a.btn-ellips.btn-ellips-link.curent{:href => "", :title => ""}
+      %span
+        1
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        2
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        3
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        8
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        \. . .
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        25
+    %a.btn-ellips.btn-ellips-right.pull-right{:href => "#", :title => ""}
+      %span
+.right_side
+  =render 'profile_right_menu'

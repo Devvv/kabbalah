@@ -1,0 +1,112 @@
+
+.left_side
+  %h3.margin_b_20
+    Мои сообщения
+    %a{:href => 'javascript:;', :title => ''}
+      Удалить отмеченные
+    %a{:href => 'javascript:;', :title => ''}
+      Отметить все
+    %a{:href => 'javascript:;', :title => ''}
+      Показать непрочитанные
+
+  .list.margin_b_30
+    .line
+      .info
+        .names
+          Alexander, Константинов Константин Дмитриевич
+        .time
+          сегодня в 13.20
+      .preview
+        %a.text{:href => '/profile/dialog', :title => ''}
+          Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно
+        .file
+          %i.icon-attached
+          Изображение
+      .checkbox
+    .line
+      .info
+        .names
+          Alexander, Константинов Константин Дмитриевич
+        .time
+          вчера в 13.20
+      .preview
+        %a.text{:href => '/profile/dialog', :title => ''}
+          %i.icon-mail-answer
+          Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно
+        .file
+      .checkbox
+    .line
+      .info
+        .names
+          Alexander, Константинов Константин Дмитриевич
+        .time
+          20 апреля 2011 в 13.20
+      .preview
+        %a.text{:href => '/profile/dialog', :title => ''}
+          %b
+            Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно
+        .file
+      .checkbox
+    .line
+      .info
+        .names
+          Alexander, Константинов Константин Дмитриевич
+        .time
+          сегодня в 13.20
+      .preview
+        %a.text{:href => '/profile/dialog', :title => ''}
+          Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно
+        .file
+          %i.icon-attached
+          Изображение
+      .checkbox
+    .line
+      .info
+        .names
+          Alexander, Константинов Константин Дмитриевич
+        .time
+          вчера в 13.20
+      .preview
+        %a.text{:href => '/profile/dialog', :title => ''}
+          %i.icon-mail-answer
+          Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно
+        .file
+      .checkbox
+    .line
+      .info
+        .names
+          Alexander, Константинов Константин Дмитриевич
+        .time
+          20 апреля 2011 в 13.20
+      .preview
+        %a.text{:href => '/profile/dialog', :title => ''}
+          %b
+            Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно Это сообщение до сих пор вами не прочитано, я надеюсь, что вы оперативно
+        .file
+      .checkbox
+  .clear
+  .pagination.pagination-left
+    %a.btn-ellips.btn-ellips-left.pull-left{:href => "#", :title => ""}
+      %span
+    %a.btn-ellips.btn-ellips-link.curent{:href => "", :title => ""}
+      %span
+        1
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        2
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        3
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        8
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        \. . .
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        25
+    %a.btn-ellips.btn-ellips-right.pull-right{:href => "#", :title => ""}
+      %span
+.right_side
+  =render 'profile_right_menu'

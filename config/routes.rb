@@ -1,5 +1,13 @@
 Kabbalah::Application.routes.draw do
 
+  get "profile/dialog"
+  get "profile/shoping"
+  get "profile/calendar"
+  get "profile/history"
+  get "profile/mail"
+  get "profile/library"
+  get "profile/wish"
+  get "profile/information"
   get "about/index"
   devise_for :users
 

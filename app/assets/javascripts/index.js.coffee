@@ -10,6 +10,20 @@ $ ->
     alwaysVisible: true
   })
 
+  $('#select').each ->
+    $(this).find('select').on 'change', ->
+      $(this).parent().find('span').html( $(this).find(':selected').text() )
+  checkbox_callback = () ->
+
+  $('.checkbox').each ->
+    $(this).on 'click', (e) ->
+      $(this).toggleClass 'checked'
+      checkbox_callback(e)
+  $('.checked_el').each ->
+    $(this).on 'click', (e) ->
+      if e.target.nodeName != 'A'
+        $(this).find('.checkbox').toggleClass 'checked'
+        checkbox_callback(e)
   $('.header-menu > li, .header-menu li ul').on 'mouseenter', ->
     $(this).addClass 'hover'
   $('.header-menu > li, .header-menu li ul').on 'mouseleave', ->

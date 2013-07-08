@@ -1,0 +1,64 @@
+
+.left_side
+  %h3.margin_b_30
+    Личная информация
+  %form.form.margin_b_55
+    .form-line
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Имя`', :name => ''}
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Фамилия', :name => ''}
+    .form-line
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'E-mail`', :name => ''}
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Телефон', :name => ''}
+  %h4.h2_5_f_18
+    Адреса доставки
+  %form.form.margin_b_55
+    .form-line
+      .fl25
+        %input{:type => 'text', :value => "", :placeholder => 'Имя`', :name => ''}
+      .fl50#select
+        %span
+          Москва
+        .select_btn
+        %select
+          %option{:value => '0'} Москва
+          %option{:value => '1'} Санкт-Петербург
+          %option{:value => '2'} Москва
+          %option{:value => '3'} Санкт-Петербург
+          %option{:value => '4'} Москва
+          %option{:value => '5'} Санкт-Петербург
+          %option{:value => '6'} Москва
+    .form-line
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Улица`', :name => ''}
+      .fl25
+        %input{:type => 'text', :value => "", :placeholder => 'Номер дома', :name => ''}
+      .fl25
+        %input{:type => 'text', :value => "", :placeholder => 'Номер квартиры', :name => ''}
+
+  %h4.h2_5_f_18
+    Мой учитель
+  .teacher-list
+    .teacher-list-line
+      .name
+        Константинов Константин Дмитриевич
+      .btn-list-left
+        %a.btn.btn-text.btn-nopadding{:href => '#', :title => ''}
+          %i.icon-mail-gray
+          Написать сообщение
+        %a.btn.btn-text.btn-nopadding{:href => '#', :title => ''}
+          %i.icon-user-gray
+          Смотреть профиль
+  .form.margin_b_60.btn-list-right
+    .form-line
+      %a.btn.btn-blue.btn-big.pull-right{:href => '#', :title => ''}
+        Сохранить
+      %a.btn.btn-big.btn-transparent.pull-right{:href => '#', :title => ''}
+        %i.icon-text
+          <
+        Назад
+.right_side
+  =render 'profile_right_menu'

@@ -1,0 +1,61 @@
+.left_side.dialog
+  %h3.margin_b_0
+    Диалог
+  .chat.nano
+    .inner_chat
+      .message
+        .name
+          %a{:href => 'javascript:;', :title => ''}
+            Константинов Константин Дмитриевич
+        .date
+          сегодня, 14.20
+        .text
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      .message
+        .name
+          %a{:href => 'javascript:;', :title => ''}
+            Alexander
+        .date
+          вчера, 14.20
+        .img
+          %img{:src => '/assets/demo/nigth.jpg', :width => '140', :height => '86', :alt => '' }
+          %span
+            %i.icon-attached
+            Krasivye_gory
+        .text
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+      .message
+        .name
+          %a{:href => 'javascript:;', :title => ''}
+            Константинов Константин Дмитриевич
+        .date
+          сегодня, 14.26
+        .text
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+    .chat_scroll_bar
+      .chat_bar
+
+  %h3.fs_18.margin_b_0
+    Ваш текст сообщения
+  %form.chat_text_input
+    .chat_text_input_inner
+      %textarea
+    .add_file
+      %a{:href => 'javascript:;', :title => ''}
+        %i.icon-attached
+        Прикрепить еще изображение
+      %span
+        %i.icon-attached-black
+        Karta_12-12-11
+      %input{:type=>'file', :value => ''}
+  .form.margin_b_60.btn-list-right
+    .form-line
+      %a.btn.btn-blue.btn-big.pull-right{:href => '#', :title => ''}
+        Отправить
+      %a.btn.btn-big.btn-transparent.pull-right{:href => '#', :title => ''}
+        %i.icon-text
+          <
+        Назад
+.right_side
+  =render 'profile_right_menu'

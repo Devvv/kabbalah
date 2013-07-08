@@ -2,7 +2,7 @@
 %html
   %head
     %title Kabbalah
-    //%link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic", :rel => "stylesheet", :type => "text/css"}/
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -11,10 +11,10 @@
       #header
         .container
           .top
-            %a.btn.btn-link.btn-link-white{ :href => '#', :title => '' }
+            %a.btn.btn-link.btn-link-white.personal_cabinet{ :href => '/profile/information', :title => '' }
               %i.icon-man
               Личный кабинет
-            %a.btn.btn-link.btn-nopadding{ :href => '#', :title => '' }
+            %a.btn.btn-link.btn-nopadding{ :href => '/profile/mail_list', :title => '' }
               %i.icon-mail-big
               %span.bubble 4
             .auth-line
@@ -281,6 +281,6 @@
           %a.btn.btn-link.pull-left.delimer
           %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - я забыл пароль'}
             Я забыл пароль
-          %a.btn.pull-right.btn-light-blue{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
+          %a.btn.pull-right.btn-light-blue.btn-big{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
             Войти
   %a.popup_close{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Закрыть'}
