@@ -324,7 +324,7 @@ textarea
         line-height: 25px
         font-family: $serif
       .p-big
-        font-size: 22px
+        font-size: 20px
         line-height: 30px
         width: 100%
         clear: both
@@ -580,7 +580,9 @@ textarea
               text-decoration: none
               h4
                 color: $link_color_hover !important
-
+                a
+                  &:hover
+                    text-decoration: none
             >*
               display: block
               width: 100%
@@ -595,7 +597,7 @@ textarea
             h4
               font-size: 16px
               .checkbox
-                margin-top: 1px
+                margin-top: 4px
             p
               font-size: 15px
               line-height: 19px
@@ -627,6 +629,21 @@ textarea
           width: 100% !important
           padding: 0
           margin: 0
+        .page_else_load
+          width: 100%
+          text-align: center
+          img
+            display: inline-block
+            margin-right: 5px
+            margin-top: -3px
+          a
+            display: inline-block
+            width: auto
+            font-size: 16px
+            border-bottom: 1px dashed #262626
+            &:hover
+              color: $link_color_hover
+              border-color: $link_color_hover
       ul.ul-box-list-four
         li
           width: 166.5px

@@ -1,5 +1,6 @@
 Kabbalah::Application.routes.draw do
 
+  get "shopping/shop"
   get "profile/teacher_calendar"
   get "profile/teacher"
   get "profile/students"
