@@ -5,12 +5,12 @@
   %form.form.margin_b_55
     .form-line
       .fl50
-        %input{:type => 'text', :value => "", :placeholder => 'Имя`', :name => ''}
+        %input{:type => 'text', :value => "", :placeholder => 'Имя', :name => ''}
       .fl50
         %input{:type => 'text', :value => "", :placeholder => 'Фамилия', :name => ''}
     .form-line
       .fl50
-        %input{:type => 'text', :value => "", :placeholder => 'E-mail`', :name => ''}
+        %input{:type => 'text', :value => "", :placeholder => 'E-mail', :name => ''}
       .fl50
         %input{:type => 'text', :value => "", :placeholder => 'Телефон', :name => ''}
   %h4.h2_5_f_18
@@ -18,7 +18,7 @@
   %form.form.margin_b_55
     .form-line
       .fl25
-        %input{:type => 'text', :value => "", :placeholder => 'Имя`', :name => ''}
+        %input{:type => 'text', :value => "", :placeholder => 'Имя', :name => ''}
       .fl50#select
         %span
           Москва
@@ -33,7 +33,7 @@
           %option{:value => '6'} Москва
     .form-line
       .fl50
-        %input{:type => 'text', :value => "", :placeholder => 'Улица`', :name => ''}
+        %input{:type => 'text', :value => "", :placeholder => 'Улица', :name => ''}
       .fl25
         %input{:type => 'text', :value => "", :placeholder => 'Номер дома', :name => ''}
       .fl25
@@ -49,7 +49,7 @@
         %a.btn.btn-text.btn-nopadding{:href => '#', :title => ''}
           %i.icon-mail-gray
           Написать сообщение
-        %a.btn.btn-text.btn-nopadding{:href => '#', :title => ''}
+        %a.btn.btn-text.btn-nopadding{:onclick => 'Kabbalah.popup.show("#teacher_detail");', :href => 'javascript:;', :title => ''}
           %i.icon-user-gray
           Смотреть профиль
   .form.margin_b_60.btn-list-right

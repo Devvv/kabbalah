@@ -1,11 +1,16 @@
 #login
-  %h3
+  .popup_name
     Вход в личный кабинет
-  %form.form-vertical
-
-
-#register
-
-#reset_password
-
-#call_back
+  %form.form.form-vertical
+    .form-line
+      %input{:type => 'text', :value => "", :placeholder => 'E-mail', :name => ''}
+    .form-line
+      %input{:type => 'text', :value => "", :placeholder => 'Пароль', :name => ''}
+    .form-line
+      %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - реистрации'}
+        Регистрация
+      %a.btn.btn-link.pull-left.delimer
+      %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - я забыл пароль'}
+        Я забыл пароль
+      %a.btn.pull-right.btn-light-blue.btn-big{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
+        Войти

@@ -1,0 +1,130 @@
+#login
+  .popup_name
+    Вход в личный кабинет
+  %form.form.form-vertical
+    .form-line
+      %input{:type => 'text', :value => "", :placeholder => 'E-mail', :name => ''}
+    .form-line
+      %input{:type => 'text', :value => "", :placeholder => 'Пароль', :name => ''}
+    .form-line
+      %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - реистрации'}
+        Регистрация
+      %a.btn.btn-link.pull-left.delimer
+      %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - я забыл пароль'}
+        Я забыл пароль
+      %button.btn.pull-right.btn-light-blue.btn-big{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
+        Войти
+#reset_password
+  .popup_name
+    Восстановление пароля
+  %form.form.form-vertical
+    .form-line
+      .fl-text-14.margin_b_10.tahoma
+        Введите e-mail, на который вы регистрировались на сайте и следуйте инструкциям
+    .form-line
+      %input{:type => 'text', :value => "", :placeholder => 'e-mail', :name => ''}
+    .form-line
+      %button.btn.pull-right.btn-light-blue.btn-big{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
+        Отправить
+#registration
+  .popup_name
+    Регистрация
+  %form.form.form-vertical
+    .form-line
+      %label
+        Имя*
+      %input{:type => 'text', :value => "", :name => ''}
+    .form-line
+      %label
+        Фамилия*
+      %input{:type => 'text', :value => "", :name => ''}
+    .form-line
+      %label
+        e-mail*
+      %input{:type => 'text', :value => "", :name => ''}
+    .form-line
+      %label
+        Телефон*
+      %input{:type => 'text', :value => "", :name => ''}
+    .form-line
+      %label
+        Город
+      #select{:onmousedown => 'Kabbalah.select(this)'}
+        %span
+          Москва
+        .select_btn
+        %select
+          %option{:value => "0"} Москва
+          %option{:value => "1"} Санкт-Петербург
+          %option{:value => "2"} Москва
+          %option{:value => "3"} Санкт-Петербург
+          %option{:value => "4"} Москва
+          %option{:value => "5"} Санкт-Петербург
+          %option{:value => "6"} Москва
+    .form-line
+      .fl100.fl-checkbox
+        .checkbox.pull-left{:onmousedown => 'Kabbalah.checkbox(this)'}
+        – с
+        %a{:href => "#", :title => "Условия использования"}
+          условиями
+        использования сайта согласен
+    .form-line
+      %span.help-text
+        * – обязательные поля
+      %button.btn.pull-right.btn-light-blue.btn-big{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
+        Войти
+#mail_back
+  .popup_name
+    Обратная связь
+  %form.form.form-vertical
+    .form-line
+      .fl-text-14.margin_b_10.tahoma
+        Вы можете связаться с нами через простую форму и мы оперативно ответим вам
+    .form-line
+      %input{:type => 'text', :value => "", :placeholder => 'e-mail', :name => ''}
+    .form-line
+      %textarea{:placeholder => 'Текст сообщения', :name => ''}
+
+    .form-line
+      %button.btn.pull-right.btn-light-blue.btn-big{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
+        Отправить
+#teacher_detail.text_information_popup
+  .popup_name
+    %i.icon-user-gray.pull-left
+    Учитель
+  %form.form.form-vertical
+    .form-line
+      %label
+        Имя
+      %p
+        Константинов Константин Дмитриевич
+    .form-line
+      %label
+        Адрес
+      %p
+        г.Москва, ул. Энергетиков, 8
+    .form-line
+      %label
+        Имя
+      %p
+        Константинов Константин Дмитриевич
+    .form-line
+      %label
+        Стаж работы
+      %p
+        8 лет
+    .form-line
+      %label
+        e-mail
+      %p
+        konstantin@gmail.com
+    .form-line
+      %label
+        Телефон
+      %p
+        +7 925 654 25 85
+    .form-line
+      %label
+        Описание
+      %p.op
+        Небольшое краткое описание учителя или ученика на один абзац или чуть больше. Личные качества, заметки и так далее.

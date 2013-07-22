@@ -1,6 +1,58 @@
 .left_side
-  %h3.margin_b_30
-    Моя календарь
-
+  %h3
+    Календарь событий
+  .content_box
+    .w100
+      .calendar_event.margin_b_20
+        #calendar
+  .calendar_event_detail
+    %h4
+      12 мая 2013
+    .calendar_event_detail_inner
+      .name
+        .calendar_event_icon.calendar_event_event
+        Мероприятие «Обучение управлением эмоциями»?
+      %img{:src => '/assets/tree_img.jpg', :width => '345', :height => '488', :alt => '' }
+      %p
+        %span
+          Время
+        %span
+          13:30
+      %p
+        %span
+          Место
+        %span
+          Литейный проспект, 34, офис 5
+      %p
+        %span
+          Описание
+        %span
+          Семинар, который позволит вам научиться контролироватьсвои негативные и разрушающие переживания и преобразовывать гнев в энергию созидания.
+      .btn-list-left
+        %a.btn.btn-link.btn-nopadding{:href => '', :title => ''}
+          %i.icon-close-mini-gray
+          Отказаться от участия
+        %a.btn.btn-link.btn-nopadding{:href => '', :title => ''}
+          %i.icon-mail-mini-gray
+          Написать сообщение учителю
+    .day-event-list
+      %h4
+        .calendar_event_icon.calendar_event_event
+        Мероприятие «Обучение управлением эмоциями»?
+      %p
+        Что, если бы существовала невидимая мудрость, открывающая духовные и физические законы мироздания? И, хотя она была скрыта на протяжении веков, эта мудрость приводит к источнику истинного счастья и наполнения. Название ей - Каббала. Хотите узнать больше? Лучше один раз...
+  .calendar-event-preview
+    %div
+      .calendar_event_icon.calendar_event_event
+      Мероприятия
+    %div
+      .calendar_event_icon.calendar_event_good_day
+      Благоприятные дни
+    %div
+      .calendar_event_icon.calendar_event_neutral_day
+      Незначительные дни
+    %div
+      .calendar_event_icon.calendar_event_bad_day
+      Неблагоприятные дни
 .right_side
   =render 'profile_right_menu'

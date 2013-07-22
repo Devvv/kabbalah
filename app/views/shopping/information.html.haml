@@ -1,0 +1,106 @@
+.left_side
+  %h3.margin_b_20
+    Подтверждение покупки
+  %form.form.margin_b_55
+    .form-line
+      .fl50.fl-text-14
+        Сумма покупки
+      .fl50.fl-text-18.fl-text-bold
+        13 450 р.
+  %h3.margin_b_30
+    Личная данные
+  %form.form.margin_b_55
+    .form-line
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Имя', :name => ''}
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Фамилия', :name => ''}
+    .form-line
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'E-mail', :name => ''}
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Контактный телефон', :name => ''}
+  %h4.h2_5_f_18
+    Адреса доставки
+  %form.form.margin_b_55
+    .form-line
+      .fl25
+        %input{:type => 'text', :value => "", :placeholder => 'Индекс', :name => ''}
+      .fl50#select
+        %span
+          Москва
+        .select_btn
+        %select
+          %option{:value => '0'} Москва
+          %option{:value => '1'} Санкт-Петербург
+          %option{:value => '2'} Москва
+          %option{:value => '3'} Санкт-Петербург
+          %option{:value => '4'} Москва
+          %option{:value => '5'} Санкт-Петербург
+          %option{:value => '6'} Москва
+    .form-line
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Улица', :name => ''}
+      .fl25
+        %input{:type => 'text', :value => "", :placeholder => 'Дома', :name => ''}
+      .fl25
+        %input{:type => 'text', :value => "", :placeholder => 'Квартира / офис', :name => ''}
+
+  %h4.h2_5_f_18
+    Платежная информация
+  %form.form.margin_b_30
+    .form-line
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Улица', :name => ''}
+      .fl25#select
+        %span
+          1/13
+        .select_btn
+        %select
+          %optgroup{:label => '2013'}
+            %option{:value => '6'} 7/13
+            %option{:value => '0'} 8/13
+            %option{:value => '1'} 9/13
+            %option{:value => '2'} 10/13
+            %option{:value => '3'} 11/13
+            %option{:value => '4'} 12/13
+          %optgroup{:label => '2014'}
+            %option{:value => '1'} 1/14
+            %option{:value => '2'} 2/14
+            %option{:value => '3'} 3/14
+            %option{:value => '4'} 4/14
+            %option{:value => '5'} 5/14
+            %option{:value => '6'} 6/14
+            %option{:value => '6'} 7/14
+            %option{:value => '0'} 8/14
+            %option{:value => '1'} 9/14
+            %option{:value => '2'} 10/14
+            %option{:value => '4'} 11/14
+            %option{:value => '4'} 12/14
+          
+    .form-line
+      .fl50
+        %input{:type => 'text', :value => "", :placeholder => 'Имя держателя карты', :name => ''}
+      .fl25
+        %input{:type => 'text', :value => "", :placeholder => 'CVV2', :name => ''}
+      .fl25.fl-text-12
+        – три последние цифры на обратной стороне карты
+    .form-line
+      .fl100.fl-checkbox
+        .checkbox.pull-left
+        – с
+        %a{:href => '#', :title => 'Условия использования'}
+          условиями использования
+        купленного контента согласен
+
+
+  .form.margin_b_60.btn-list-right
+    .form-line
+      %a.btn.btn-blue.btn-big.pull-right{:href => '/shopping/accept', :title => ''}
+        Подтвердить
+      %a.btn.btn-big.btn-transparent.pull-right{:href => '/shopping/list', :title => ''}
+        %i.icon-text
+          <
+        Назад
+.right_side
+  =render 'profile_right_menu'

@@ -2,32 +2,92 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+window.Kabbalah = {
+  menu_hover: ->
+    $('.header-menu > li, .header-menu li ul').on 'mouseenter', ->
+      $(this).addClass 'hover'
+    $('.header-menu > li, .header-menu li ul').on 'mouseleave', ->
+      $(this).removeClass 'hover'
+
+  popup: {
+    hide: (act) ->
+      if act == 'fast'
+        $('#popup').css({marginTop: '-1000px'})
+        $('#popup').find('.popup_inner').html('')
+      else
+        $('#back_bg').fadeOut()
+        $('#popup').animate( {marginTop: '-1000px'}, 300, ->
+          $(this).find('.popup_inner').html('')
+        )
+    show: (el_id) ->
+      window.Kabbalah.popup.hide('fast')
+      $('#back_bg').fadeIn()
+      $('#popup')
+        .find('.popup_inner')
+        .load( "/popup/index "+el_id, -> $('#popup').animate({marginTop: ((-1)*($('#popup').innerHeight()/2)) + 'px' }, 200) )
+      console.log(   )
+  }
+  checkbox: (el) ->
+    if !el
+      $('.checkbox').on 'click', (e) ->
+        $(this).toggleClass 'checked'
+      $('.checked_el').each ->
+        $(this).on 'click', (e) ->
+          if e.target.nodeName != 'A'
+            $(this).find('.checkbox').toggleClass 'checked'
+    else
+      $(el).toggleClass 'checked'
+  input_file: (el) ->
+    el_val = $(el).val().split('\\')
+    el_size = el_val.length
+    $(el).parent().find('span:first').html( '<span><i class="icon-attached-black"></i>'+el_val[el_size-1]+'</span>' );
+  select: (el) ->
+    if !el
+      $('#select').each ->
+        $(this).find('select')
+          .on 'focus', ->
+              $(this).parent().css {background: '#ffffff'}
+          .on 'blur', ->
+              $(this).parent().css {background: '#f5f5f5'}
+          .on 'change', ->
+              $(this).parent().find('span').html( $(this).find(':selected').text() )
+              $(this).parent().css {background: '#f5f5f5'}
+    else
+
+      $(el).find('select')
+        .on 'focus', ->
+            $(this).parent().css {background: '#ffffff'}
+        .on 'blur', ->
+            $(this).parent().css {background: '#f5f5f5'}
+        .on 'change', ->
+            $(this).parent().find('span').html( $(this).find(':selected').text() )
+            $(this).parent().css {background: '#f5f5f5'}
+}
+
 $ ->
+  Kabbalah.select()
+  Kabbalah.menu_hover()
+  Kabbalah.checkbox()
 
-  $(".nano").nanoScroller({
-    preventPageScrolling: false
-    iOSNativeScrolling: true
-    alwaysVisible: true
+  $(".nano").mCustomScrollbar({
+    mouseWheel: true
+    scrollButtons:{
+      enable: false
+    }
+    advanced:{
+      updateOnContentResize: true
+    }
+    scrollInertia: 0
+    contentTouchScroll: 0
   })
+#  $(".nano").nanoScroller({
+#    preventPageScrolling: false
+#    iOSNativeScrolling: true
+#    alwaysVisible: true
+#  })
 
-  $('#select').each ->
-    $(this).find('select').on 'change', ->
-      $(this).parent().find('span').html( $(this).find(':selected').text() )
-  checkbox_callback = () ->
 
-  $('.checkbox').each ->
-    $(this).on 'click', (e) ->
-      $(this).toggleClass 'checked'
-      checkbox_callback(e)
-  $('.checked_el').each ->
-    $(this).on 'click', (e) ->
-      if e.target.nodeName != 'A'
-        $(this).find('.checkbox').toggleClass 'checked'
-        checkbox_callback(e)
-  $('.header-menu > li, .header-menu li ul').on 'mouseenter', ->
-    $(this).addClass 'hover'
-  $('.header-menu > li, .header-menu li ul').on 'mouseleave', ->
-    $(this).removeClass 'hover'
+
   today = new Date();
   y = today.getFullYear();
 
@@ -64,10 +124,5 @@ $ ->
 #        if n.getTime() == date.getTime()
 #        return [false,"ui-state-active","Event Name"];
       )
-
-
-
-
-
   })
 

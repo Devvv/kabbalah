@@ -18,23 +18,23 @@
               %i.icon-mail-big
               %span.bubble 4
             .auth-line
-              %a.btn.btn-link.btn-link-white{ :href => '#', :title => '' }
+              %a.btn.btn-link.btn-link-white{:onclick => 'Kabbalah.popup.show("#registration");', :href => 'javascript:;', :title => '' }
                 Регистрация
               %a.btn.btn-link.delimer.btn-link-white
                 |
-              %a.btn.btn-link.forgot_password.btn-link-white{ :href => '#', :title => '' }
+              %a.btn.btn-link.forgot_password.btn-link-white{:onclick => 'Kabbalah.popup.show("#reset_password");', :href => 'javascript:;', :title => '' }
                 Забыли пароль
               %form
                 %input.input-blue{:type => 'text', :value => "", :placeholder => 'Логин', :name => ''}
                 %input.input-blue{:type => 'password', :value => "", :placeholder => 'Пароль', :name => ''}
-              %a.btn{ :href => '#', :title => '' }
+              %a.btn{ :onclick => 'Kabbalah.popup.show("#login");', :href => 'javascript:', :title => '' }
                 Войти
           %a.logo{ :href => '/', :title => '' }
             %img{:src => '/assets/logo.png', :width => '353', :height => '85', :alt => 'Вернуться на главную страницу' }
           .callback_block
             %a{ :href => 'callto:+77777777777', :title => 'Позвонить по номеру 88888888888' }
               +7 (495) 504 10 12
-            %a{ :href => 'mailto:test@test.ru', :title => 'Отправить письмо test@test.ru' }
+            %a{:onclick => 'Kabbalah.popup.show("#mail_back");', :href => 'javascript:;', :title => 'Отправить письмо test@test.ru' }
               Обратная связь
               %i.icon-mail
         %ul.header-menu
@@ -125,7 +125,7 @@
           %a.footer_phone{ :href => 'callto:84955041012', :title => 'Позвонить по номеру 8 (495) 504 10 12' }
             8 (495) 504 10 12
           %a.logo{ :href => '/', :title => '' }
-            %img{:src => '/assets/footer-logo.png', :width => '222', :height => '55', :alt => 'Вернуться на главную страницу' }
+            %img{:src => '/assets/footer-logo.png', :width => '223', :height => '54', :alt => 'Вернуться на главную страницу' }
         .right-side
           %div
             %p Мудрость Каббалы
@@ -173,9 +173,9 @@
               Персональный учитель
             %a{ :href => '#', :title => '' }
               Kabbalah Tv
-          %div
+          %div.right_float
             %p Блоги учителей
-          %div
+          %div.right_float
             %p Магазин
       #footer-bottom-country
         %p
@@ -263,24 +263,7 @@
         %span
           © 2013 Каббала центр
 
-#back_bg
+#back_bg{:onclick => 'Kabbalah.popup.hide();'}
 #popup
   .popup_inner
-
-    #login
-      .popup_name
-        Вход в личный кабинет
-      %form.form.form-vertical
-        .form-line
-          %input{:type => 'text', :value => "", :placeholder => 'E-mail', :name => ''}
-        .form-line
-          %input{:type => 'text', :value => "", :placeholder => 'Пароль', :name => ''}
-        .form-line
-          %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - реистрации'}
-            Регистрация
-          %a.btn.btn-link.pull-left.delimer
-          %a.btn.btn-link.pull-left.btn-nopadding{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Переключиться на форму - я забыл пароль'}
-            Я забыл пароль
-          %a.btn.pull-right.btn-light-blue.btn-big{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Войти'}
-            Войти
-  %a.popup_close{:onclick => 'Kabbala.popup("");', :href => "javascript:;", :title => 'Закрыть'}
+  %span.popup_close{:onclick => 'Kabbalah.popup.hide();', :href => "javascript:;", :title => 'Закрыть'}

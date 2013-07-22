@@ -14,6 +14,10 @@ $sans: 'Open Sans', Tahoma
 $serif: Georgia
 $Tahoma: Tahoma
 $Arial: Arial
+
+*
+  @include transition( 0 )
+
 html,
 button,
 input,
@@ -34,6 +38,9 @@ body
   //background: url('/assets/demo/profile_infoo.jpg') center top no-repeat
   //background: url('/assets/demo/profile-history.jpg') center top no-repeat
   //background: url('/assets/demo/chat.jpg') center top no-repeat
+  //background: url('/assets/demo/404.jpg') center top no-repeat
+  //background: url('/assets/demo/text_page.jpg') center top no-repeat
+
   font-family: $sans
 a
   color: $link_color
@@ -41,7 +48,11 @@ a
   &:hover
     text-decoration: underline
     color: $link_color_hover
-
+a.hovered
+  color: $link_color_hover
+  text-decoration: underline
+  &:hover
+    text-decoration: none
 hr
   display: block
   height: 1px
@@ -250,10 +261,14 @@ textarea
         font-size: 14px
         padding: 6px 20px
         margin-right: 23px
+    .full_side
+      padding: 0 20px
+      width: 100%
+      @include border_box
     .left_side
       float: left
       width: 720px
-      margin-left: 20px
+      padding-left: 20px !important
     .left_side,
     .right_side
       padding: 30px 0 0 0
@@ -291,7 +306,10 @@ textarea
           cursor: default
           &:hover
             color: $link_color
-
+        form
+          .form-line
+            margin-top: 15px
+            margin-bottom: 15px
       h4
         padding: 0
         margin: 0
@@ -300,6 +318,7 @@ textarea
         display: block
         width: 100%
         clear: both
+        font-weight: normal
       p
         font-size: 16px
         line-height: 25px
@@ -319,21 +338,47 @@ textarea
         width: 100%
         margin-bottom: 40px
         font-family: $sans
+      .shopping-tottal
+        width: 100%
+        overflow: hidden
+        .left
+          width: 47%
+          float: left
+          p
+            font-family: $sans
+            font-size: 12px
+            width: 100%
+            text-align: left
+            margin: 0
+            padding: 0
+            line-height: 24px
+        .right
+          width: 47%
+          float: right
+          p
+            font-family: $sans
+            font-size: 24px
+            width: 100%
+            text-align: right
+            margin: 0
+            padding: 0
+            margin-top: 8px
+
+
       .list
         width: 100%
         overflow: hidden
         .line
           width: 100%
           overflow: hidden
-          padding: 15px 0
+          padding: 20px 0
           border-bottom: 1px solid $border_color
           position: relative
-          &:first-child
-            margin-top: -20px
-          .history
+          .history,
+          .shoping,
+          .search_list
             width: 100%
             overflow: hidden
-            margin-top: 18px
             >div p
               width: 100%
               clear: both
@@ -348,14 +393,18 @@ textarea
               width: 163px
               margin-right: 20px
               float: left
+              text-align: center
               p
                 font-size: 12px
+              img
+                margin: 0 auto
             .center
-              width: 344px
+              width: 350px
               margin-right: 20px
               float: left
               p
                 font-size: 12px
+                width: 245px
                 a
                   font-size: 16px
                   font-weight: bold
@@ -368,7 +417,31 @@ textarea
               p
                 font-size: 14px
                 margin-bottom: 4px
-          .info
+          .shoping
+            .left
+              text-align: center
+            .center,
+            .right
+              >*:first-child
+                margin-top: -4px
+          .search_list
+            .center
+              width: 535px
+              margin-right: 0
+              .name
+                width: 100%
+                font-size: 12px
+                margin-bottom: 8px
+              .det
+                width: 100%
+                font-size: 16px
+                font-weight: bold
+                margin-bottom: 10px
+              .text
+                width: 100%
+                font-size: 14px
+                font-family: $serif
+            .info
             width: 100%
             overflow: hidden
             margin-bottom: 15px
@@ -659,6 +732,150 @@ textarea
               width: 100%
           .calendar_event
             margin-bottom: 28px
+      .incut
+        width: 100%
+        @include border_box()
+        font-family: $serif
+        border-left: 2px solid $border_color
+        padding-left: 36px
+        font-size: 24px
+        line-height: 30px
+        margin-bottom: 30px
+        padding-top: 7px
+        span
+          display: block
+          width: 100%
+          text-align: right
+          font-size: 14px
+          margin-top: 17px
+          line-height: 14px
+    .calendar_event_detail
+      width: 100%
+      overflow: visible
+      display: table
+      margin-bottom: 160px
+      h4
+        font-weight: normal
+      .calendar_event_icon
+        margin-right: 10px
+        float: left
+        margin-top: 6px
+      .calendar_event_detail_inner
+        background: #ebebeb
+        padding: 20px
+        overflow: hidden
+        margin-bottom: 25px
+        @include border_box()
+        margin-left: -20px
+        .name
+          width: 100%
+          font-size: 20px
+          margin-bottom: 20px
+
+
+        img
+          margin-bottom: 22px
+        p
+          width: 100%
+          margin: 0
+          margin-bottom: 16px
+          font-size: 14px
+          font-family: $sans
+          overflow: hidden
+          line-height: 22px
+          span
+            display: block
+            float: left
+            &:first-child
+              width: 183px
+            &:last-child
+              width: 485px
+        .btn-list-left
+          width: 100%
+          overflow: hidden
+          a
+            font-size: 12px
+            margin-right: 56px
+            .icon-close-mini-gray
+              margin-top: 2px
+            .icon-mail-mini-gray
+              margin-top: 5px
+            i
+              margin-right: 20px
+      .day-event-list
+        overflow: hidden
+        clear: both
+    .calendar-event-preview
+      width: 100%
+      overflow: hidden
+      margin-bottom: 20px
+      >div
+        float: left
+        font-size: 12px
+        margin-right: 40px
+        &:last-child
+          margin-right: 0
+        div
+          float: left
+          margin-right: 10px
+      .full-line
+        margin-bottom: 15px
+        i
+          margin-top: 1px
+      .calendar-event-preview
+
+
+
+    .text_pages
+      .p-big
+        font-size: 19px
+        font-family: $serif
+        margin-bottom: 33px
+      h3.new_h3
+        padding-left: 52px
+        font-size: 26px
+        position: relative
+        width: 92.8%
+        border-bottom: none
+        span
+          position: absolute
+          top: 7px
+          left: 10px
+          display: block
+          padding: 1px 7px
+          font-size: 13px
+          border: 2px solid $border_color
+          color: #26a0ad
+          border-radius: 20px
+          font-weight: bold
+      p.text_block
+        font-size: 16px
+        font-family: $serif
+        margin-bottom: 30px
+      .text_author
+        font-family: $serif
+        font-size: 14px
+        width: 100%
+        text-align: right
+        margin-top: 60px
+      ul
+        margin: 0
+        padding: 0
+        margin-bottom: 35px
+        margin-left: 23px
+        li
+          width: 100%
+          color: #26a0ad
+          font-size: 12px
+          margin-bottom: 25px
+          h4
+            color: $default_color
+            font-size: 18px
+            margin: 0
+            padding: 0
+            font-weight: normal
+            padding-left: 10px
+            line-height: 25px
     //.left_side
     //  padding: 23px 0 0 9px
     .dialog
@@ -674,14 +891,14 @@ textarea
         margin-bottom: 32px
         .inner_chat
           width: 663px
-          height: 457px
+          //height: 457px
           margin-top: 20px
           margin-left: 27px
           overflow: hodden
           .message
             width: 100%
             overflow: hidden
-            margin-bottom: 22px
+            margin-bottom: 30px
             .name
               font-family: $Tahoma
               font-size: 14px
@@ -700,7 +917,7 @@ textarea
               width: 100%
               clear: both
               overflow: hidden
-              margin-bottom: 12px
+              margin-bottom: 20px
               img
                 max-width: 140px
                 margin-right: 20px
@@ -720,30 +937,37 @@ textarea
               width: 100%
               clear: both
               line-height: 22px
-
-        .chat_scroll_bar
+              margin-bottom: 13px
+      .chat_scroll_bar,
+      .mCSB_scrollTools
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        width: 8px
+        border-left: 1px solid $border_color
+        border-right: 1px solid $border_color
+        .chat_bar,
+        .mCSB_dragger
+          width: 10px
           position: absolute
-          top: 0
-          right: 0
-          bottom: 0
-          width: 8px
-          border-left: 1px solid $border_color
-          border-right: 1px solid $border_color
-          .chat_bar
-            width: 10px
-            position: absolute
-            top: 10%
-            right: -1px
-            width: 10px
-            height: 100px
-            @include radius(10px)
-            background: #26a0ad
+          top: 10%
+          right: -1px
+          width: 10px
+          height: 100px
+          @include radius(10px)
+          background: #26a0ad
       .chat_text_input
         position: relative
         width: 720px
         border-right: none
         margin-bottom: 17px
         margin-left: -1px
+        .add_file
+          .icon-attached
+            margin-top: 1px
+          span
+            padding: 15px 0
         .chat_text_input_inner
           width: 100%
           overflow: hidden
@@ -751,7 +975,7 @@ textarea
           border-bottom: none
 
           textarea
-            width: 668px
+            width: 100%
             height: 72px
             border: none
             resize: none
@@ -762,42 +986,16 @@ textarea
             padding-top: 20px
             padding-left: 27px
             padding-bottom: 20px
+            background: #ffffff
         .add_file
-          width: 100%
-          overflow: hidden
           border: 1px solid $border_color
           border-top: none
-          position: relative
           background: #f5f5f5
-          input
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            width: 100%
-            height: 37px
-            opacity: 0
-            filter: alpha(opacity=0)
           a
-            display: block
             padding: 16px 0
             padding-left: 28px
             padding-right: 23px
             padding-bottom: 13px
-            font-family: $Arial
-            font-size: 12px
-            color: #a6a6a6
-            float: left
-          span
-            font-size: 12px
-            display: block
-            float: left
-            color: #555555
-            padding: 15px 0
-            padding-bottom: 13px
-            i
-              margin-top: 3px
 
     table.table-list
       margin: 0
@@ -867,6 +1065,8 @@ textarea
           padding-top: 0
         &:last-child
           border-bottom: none
+        span
+          font-weight: bold
       .active
         color: $link_color_hover
     .right_side
@@ -905,7 +1105,6 @@ textarea
       .right_side
         padding-top: 0
         margin-top: 20px
-      .left_side
         .video_box
           width: 100%
           overflow: hidden
@@ -1014,6 +1213,7 @@ textarea
       div
         width: 185px
         float: left
+        margin-bottom: 20px
         p
           margin: 0
           margin-top: 7px
@@ -1031,6 +1231,11 @@ textarea
           margin-right: 5px
           &:hover
             color: $link_color_hover
+      .right_float
+        float: right
+        width: 220px
+        clear: right
+        margin-bottom: 0
   #footer-bottom-country
     width: 100%
     margin-top: 20px
@@ -1066,6 +1271,19 @@ textarea
     span
       padding-right: 20px
 
+.calendar_event_icon
+  width: 16px
+  height: 16px
+.calendar_event_event
+  background: #26a0ad
+  @include radius(20px)
+.calendar_event_good_day
+  background: #26a0ad
+.calendar_event_neutral_day
+  background: #ededed
+.calendar_event_bad_day
+  background: #8c0035
+
 #back_bg
   position: fixed
   top: 0
@@ -1074,21 +1292,22 @@ textarea
   left: 0
   width: 100%
   height: 100%
-  //background: rgba(0, 0, 0, 0.2)
-  background: url('/assets/demo/popup_login.png') top left no-repeat
+  background: rgba(0, 0, 0, 0.2)
+  //background: url('/assets/demo/popup_login.png') top left no-repeat
   z-index: 2000
   display: none
 #popup
   position: fixed
-  top: 0
+  top: 45%
   left: 50%
   margin-left: -164px
+  margin-top: -1000px
   width: 328px
   background: rgb(255, 255, 255)
   @include radius(10px)
   padding: 20px
   z-index: 2500
-  display: none
+  display: block
   .popup_inner
     >div
       width: 100%
@@ -1104,17 +1323,33 @@ textarea
       .form-line
         .btn
           font-family: $Tahoma
-  a.popup_close
+  span.popup_close
     position: absolute
     top: 10px
     right: 10px
     width: 21px
     height: 21px
+    display: block
     background: url('/assets/ellips_close.png') left top no-repeat
+    @include transition( 0 )
     &:hover
-      background-position: right top
-
-
+      background: url('/assets/ellips_close.png') right top no-repeat
+.text_information_popup
+  .popup_name
+    font-size: 16px !important
+  .form-line
+    margin-bottom: 10px !important
+    label
+      color: #a6a6a6
+      font-size: 14px
+      font-family: $Tahoma
+    p
+      font-size: 16px
+      font-family: $serif
+      margin: 0
+    .op
+      font-size: 14px
+      line-height: 20px
 .form
   width: 100%
   display: table
@@ -1122,6 +1357,17 @@ textarea
     display: table
     width: 100%
     margin-bottom: 20px
+    .help-text
+      font-size: 12px
+      color: #a6a6a6
+      line-height: 30px
+    label
+      display: block
+      width: 100%
+      overflow: hidden
+      font-size: 14px
+      font-family: $Tahoma
+      margin-bottom: 7px
     &:last-child
       margin-bottom: 0
     .delimer
@@ -1130,6 +1376,18 @@ textarea
     .btn-link
       padding: 7px 0px
       font-size: 12px
+    .fl100
+      width: 100%
+      margin-bottom: 10px
+      clear: both
+    .fl75
+      width: 74.4%
+      float: left
+      margin-bottom: 10px
+      &:first-child
+        margin-right: 20px
+      &:last-child
+        margin-right: 0
     .fl50
       width: 48.555%
       margin-bottom: 10px
@@ -1145,6 +1403,251 @@ textarea
       float: left
       &:last-child
         margin-right: 0
+    .fl-text-12
+      font-size: 12px
+      line-height: 17px
+      margin-top: -3px
+    .fl-text-14
+      font-size: 14px
+      margin-top: 2px
+    .fl-text-18
+      font-size: 18px
+    .fl-text-bold
+      font-weight: bold
+    .fl-checkbox
+      font-size: 12px
+      line-height: 12px
+      a
+        text-decoration: underline
+.created_event
+  width: 100%
+  font-size: 14px
+  font-family: $Tahoma
+  line-height: 21px
+  .fl75.fs_18
+    line-height: 16px
+    span
+      display: block
+      float: left
+      width: 90%
+    i
+      margin-top: 0px
+  .fl75
+    img
+      margin-top: 3px
+    a.change_events_info
+      font-size: 12px
+      float: right
+      text-decoration: underline
+  .change_events_info
+    i
+      margin-right: 20px
+.edit_event
+  #select
+    width: 100px
+  .fl25
+    padding: 4px 0
+  .add_file
+    padding: 4px 0
+    input
+      height: 25px
+
+.square_table
+  width: 100%
+  overflow: hidden
+  border-bottom: 1px solid $border_color
+  margin-top: 32px
+  margin-bottom: 40px
+  .name
+    font-size: 26px
+    width: 100%
+    margin-bottom: 23px
+  table
+    width: 100%
+    margin-bottom: 25px
+    thead
+      tr
+        th
+          background: #26A0AD
+          font-size: 18px
+          color: #FFF
+          text-align: left
+          font-weight: normal
+          padding: 17px 20px
+          vertical-align: middle
+    tbody
+      tr
+        &:nth-child(odd)
+          background: #f5f5f5
+        &:first-child
+          td
+            padding: 20px
+        td
+          font-size: 14px
+          line-height: 20px
+          min-width: 140px
+          padding: 26px 20px
+
+.social_block
+  padding: 28px 32px
+  background: #f5f5f5
+  margin-top: 80px
+  margin-bottom: 40px
+.mini_slider
+  overflow: hidden
+  margin-bottom: 21px
+  .btn-ellips,
+  .btn-ellips_span
+    float: left
+    margin-bottom: 13px
+  .btn-ellips_span
+    font-size: 16px
+    margin: 4px 10px 0 10px
+    color: #a6a6a6
+  .mini_slider_view
+    width: 707px
+    height: 518px
+    overflow: hidden
+    position: relative
+    .mini_slider_inner
+      overflow: hidden
+      position: relative
+      height: 518px
+      .mini_slider_item
+        width: 707px
+        overflow: hidden
+        position: relative
+        a
+          color: #a6a6a6
+          &:hover
+            color: #a6a6a6
+            text-decoration: none
+          div
+            font-size: 12px
+            text-align: left
+            padding: 17px 0
+            font-family: $Arial
+.box-404
+  position: relative
+  left: 50%
+  margin-left: -255px
+  width: 510px
+  overflow: hidden
+  text-align: center
+  padding: 75px 0
+  h1
+    font-size: 228px
+    width: 100%
+    text-align: center
+    font-weight: normal
+    margin: 0
+    line-height: 299px
+  p
+    font-size: 22px
+    padding: 0
+    margin: 0
+    margin-top: -25px
+    &:last-child
+      margin-top: 0
+      font-size: 14px
+
+.teacher_student_list
+  width: 100%
+  margin-bottom: 30px
+  margin-left: -10px
+  padding-left: 10px
+  table
+    width: 100%
+    padding-bottom: 20px
+    margin-left: -10px
+    overflow: hidden
+    position: relative
+    tr
+      &:hover:last-child
+        td
+          background: none !important
+      &:last-child
+        td
+          padding: 0
+          span
+            display: block
+            padding: 6px 0px
+            width: 100%
+            margin-left: 10px
+            overflow: hidden
+            border-bottom: 1px solid $border_color
+      th,
+      td
+        font-weight: normal
+        font-size: 14px
+        text-align: left
+        padding: 15px 10px
+        padding-right: 20px
+        @includ text-overflow()
+        &:nth-child(4),
+        &:nth-child(5)
+          width: 17px
+        &:nth-child(1)
+          width: 256px
+          a
+            &:hover
+              text-decoration: none !important
+        &:first-child
+          margin-left: 10px
+        i.icon-mail-mini-gray
+          margin-top: 3px
+        i.icon-calendar
+          margin-top: 0
+        .checkbox
+          margin-top: 3px
+      .add
+        background: #ffffff !important
+        padding-top: 10px
+        padding-right: 0
+        a
+          float: right
+          i
+            margin-right: 20px
+    .not_accepted
+      color: #a6a6a6 !important
+      a
+        color: #a6a6a6 !important
+      td
+        &:nth-child(1)
+          .icon-blue-accept-elips
+            display: none
+
+    thead
+      position: relative
+      tr
+        th
+          padding: 0
+          span
+            display: block
+            padding: 15px 0px
+            width: 100%
+            margin-left: 10px
+            overflow: hidden
+            border-bottom: 1px solid $border_color
+      .right_action
+        position: absolute
+        top: 16px
+        right: 0
+        a
+          float: right
+          font-size: 12px
+          text-decoration: underline
+    tbody
+      tr
+        td
+          font-family: $Tahoma
+        &:hover
+          td
+            background: $border_color
+        &:last-child
+          td
+            padding-left: 0
+            margin-left: 0
 
 .find
   position: relative
@@ -1215,12 +1718,34 @@ textarea
     @include gradient_vertical(#cc426a, #810332)
   &:active
     @include gradient_vertical(#73012c, #bb345a)
+.btn-one-color-blue
+  @include gradient_vertical(#0b7783, #0b7783)
+  &:focus,
+  &:hover
+    color: #ffffff
+    @include gradient_vertical(#0b7783, #0a5a63)
+  &:active
+    @include gradient_vertical(#0a5a63, #0b7783)
 .btn-transparent
   @include gradient_vertical(transparent, transparent)
   border: 1px solid $border_color !important
   color: $default_color
-.btn-big
-  padding: 6px 43px
+  &:focus,
+  &:hover
+    color: #000000
+    @include gradient_vertical(#ffffff, #dedede)
+  &:active
+    @include gradient_vertical(#dedede, #ffffff)
+.btn-big,
+.btn-long
+  padding: 5px 43px
+  font-size: 14px
+  i
+    font-size: 14px !important
+    line-height: 19px !important
+.btn-big-two
+  padding: 5px 15px
+  padding-bottom: 6px
   font-size: 14px
   i
     font-size: 14px !important
@@ -1284,6 +1809,22 @@ input[type=mail].input-blue
     background: #ffffff
     color: $default_color
     border-color: rgb(230, 230, 230)
+textarea
+  width: 100%
+  height: 150px
+  padding: 5px 12px
+  font-size: 14px
+  border: none
+  @include radius(5px)
+  @include border-box()
+  background: rgb(245, 245, 245)
+  color: #000000
+  border: 1px solid rgb(230, 230, 230)
+  resize: none
+  &:focus
+    background: #ffffff
+    color: $default_color
+    outline: none
 #select
   position: relative
   height: 29px
@@ -1327,6 +1868,38 @@ input[type=mail].input-blue
   cursor: pointer
 .checkbox.checked
   background: transparent url('/assets/checkbox.png') right top no-repeat
+.add_file
+  width: 100%
+  overflow: hidden
+  position: relative
+  input
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 37px
+    opacity: 0
+    filter: alpha(opacity=0)
+    cursor: pointer
+  a
+    display: block
+    font-family: $Arial
+    font-size: 12px
+    color: #a6a6a6
+    float: left
+    padding-right: 20px
+  span
+    font-family: $Arial
+    font-size: 12px
+    display: block
+    float: left
+    color: #555555
+    padding-bottom: 13px
+    @include text-overflow()
+    i
+      margin-top: 3px
 i.icon-man
   width: 12px
   height: 12px
@@ -1380,16 +1953,55 @@ i.icon-attached
   width: 8px
   height: 11px
   float: left
-  margin-top: 1px
+  margin-top: 3px
   margin-right: 5px
   background: url('/assets/icon-attached.png') top left no-repeat
 i.icon-attached-black
   width: 8px
   height: 11px
   float: left
-  margin-top: 3spx
+  margin-top: 3px
   margin-right: 5px
   background: url('/assets/icon-attached-black.png') top left no-repeat
+i.icon-close-mini-gray
+  width: 15px
+  height: 15px
+  float: left
+  margin-top: 3px
+  margin-right: 5px
+  background: url('/assets/icon-close-mini-gray.png') top left no-repeat
+i.icon-mail-mini-gray
+  width: 17px
+  height: 12px
+  float: left
+  margin-top: 5px
+  margin-right: 5px
+  background: url('/assets/icon-mail-mini-gray.png') top left no-repeat
+i.icon-calendar
+  width: 15px
+  height: 14px
+  float: left
+  margin-top: 5px
+  margin-right: 5px
+  background: url('/assets/icon-calendar.png') top left no-repeat
+i.icon-pencil
+  width: 12px
+  height: 12px
+  float: left
+  margin-top: 5px
+  margin-right: 5px
+  background: url('/assets/penscil.png') top left no-repeat
+i.icon-blue-accept-elips
+  width: 15px
+  height: 15px
+  float: left
+  margin-top: 3px
+  margin-right: 7px
+  background: url('/assets/icon-blue-accept-elips.png') top left no-repeat
+
+.full-width
+  width: 100%
+  @include border_box()
 .pull-left
   float: left
 .pull-right
@@ -1400,7 +2012,8 @@ i.icon-attached-black
   height: 0
   border: none
   clear: both
-
+.tahoma
+  font-family: $Tahoma
 .fs_18
   font-size: 18px !important
 .fs25
@@ -1428,6 +2041,8 @@ i.icon-attached-black
   margin-bottom: 14px !important
 .margin_b_20
   margin-bottom: 20px !important
+.margin_b_25
+  margin-bottom: 25px !important
 .margin_b_30
   margin-bottom: 30px !important
 .margin_b_40
@@ -1440,6 +2055,8 @@ i.icon-attached-black
   margin-bottom: 60px !important
 .margin_b_70
   margin-bottom: 70px !important
+.margin_b_80
+  margin-bottom: 80px !important
 .btn-ellips,
 .ui-datepicker-prev,
 .ui-datepicker-next
@@ -1450,11 +2067,13 @@ i.icon-attached-black
   @include radius(50px)
   color: $default_color
   cursor: pointer
+  @include transition(0)
   &:hover
     width: 28px
     height: 28px
     border: 1px solid $border_color
     background: #ffffff
+    @include transition(0)
   span
     display: block
     width: 6px
@@ -1496,3 +2115,10 @@ i.icon-attached-black
   border: 1px solid $border_color !important
   background: #ffffff !important
   color: $link_color_hover !important
+.separator
+  width: 100%
+  height: 0
+  border-bottom: 1px solid $border_color
+  margin: 40px 0
+.elepsed
+  @include radius(20px)

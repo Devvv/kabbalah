@@ -1,5 +1,15 @@
 Kabbalah::Application.routes.draw do
 
+  get "profile/teacher_calendar"
+  get "profile/teacher"
+  get "profile/students"
+  get "other/text_page"
+  get "search/index"
+  get "popup/index"
+  get "shopping/success"
+  get "shopping/accept"
+  get "shopping/list"
+  get "shopping/information"
   get "profile/dialog"
   get "profile/shoping"
   get "profile/calendar"

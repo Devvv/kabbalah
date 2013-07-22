@@ -1,0 +1,262 @@
+.left_side
+  %h3
+    Календарь событий
+  .content_box
+    .w100
+      .calendar_event.margin_b_20
+        #calendar
+  %h4.border-none.margin_b_30
+    12 мая 2013
+  .created_event.margin_b_80
+    .form.margin_b_10
+      .form-line
+        .fl25
+          Мероприятие
+        .fl75.fs_18
+          %span
+            Обучение управлению эмоциями
+          %a.pull-right{:href => 'javascript:;', :title => ''}
+            %i.icon-close-mini-gray
+      .form-line
+        .fl25
+          Время
+        .fl75
+          13:30
+      .form-line
+        .fl25
+          Место
+        .fl75
+          Литейный проспект, 34, офис 5
+      .form-line
+        .fl25
+          Описание
+        .fl75
+          Семинар, который позволит вам научиться контролироватьсвои негативные и разрушающие переживания и преобразовывать гнев в энергию созидания.
+      .form-line
+        .fl25
+          Изображение
+        .fl75
+          %img{:src => '/assets/tree_img.jpg', :width => '162', :height => '225', :alt => '' }
+      .form-line
+        .fl25
+          &nbsp;
+        .fl75
+          %a.change_events_info{:href => 'javascript:;', :title => ''}
+            %i.icon-pencil
+            Редактировать мероприятие
+    .teacher_student_list
+      %table
+        %thead
+          %tr
+            %th
+              %span
+                Имя
+            %th
+              %span
+                e-mail
+            %th
+              %span
+                Телефон
+            %th.ic_last
+              %span
+                &nbsp;
+            %th.ic_last
+              %span
+                &nbsp;
+        %tbody
+          %tr.not_accepted
+            %td
+              %span
+              %i.icon-blue-accept-elips
+              %a{:href => '', :title => ''}
+                Александр Дмитриевич
+            %td
+              rector@sitc.ru
+            %td
+              +79015360057
+            %td
+              %i.icon-mail-mini-gray
+            %td
+              .checkbox
+          %tr
+            %td.add{:colspan => '5'}
+              %a{:href => 'javascript:;', :title => ''}
+                %i.icon-user-gray
+                Добавить ученика
+          %tr
+            %td
+              %span
+            %td
+              %span
+            %td
+              %span
+            %td
+              %span
+            %td
+              %span
+
+  .created_event.edit_event
+    .form.margin_b_10
+      .form-line
+        .fl25
+          Мероприятие
+        .fl75
+          %input{:type => 'text', :value => "Обучение управлению эмоциями", :placeholder => '', :name => ''}
+      .form-line
+        .fl25
+          Время
+        .fl75
+          #select
+            %span
+              00:00
+            .select_btn
+            %select
+              %option{:value => '00:00'} 00:00
+              %option{:value => '00:00'} 00:00
+              %option{:value => '00:00'} 00:00
+              %option{:value => '00:00'} 00:00
+              %option{:value => '00:00'} 00:00
+              %option{:value => '00:00'} 00:00
+              %option{:value => '00:00'} 00:00
+      .form-line
+        .fl25
+          Место
+        .fl75
+          %input{:type => 'text', :value => "Литейный проспект, 34, офис 5", :placeholder => '', :name => ''}
+      .form-line
+        .fl25
+          Описание
+        .fl75
+          %textarea
+            Семинар, который позволит вам научиться контролироватьсвои негативные и разрушающие переживания и преобразовывать гнев в энергию созидания.
+      .form-line
+        .fl25
+          Изображение
+        .fl75
+          .add_file
+            %a{:href => 'javascript:;', :title => ''}
+              %i.icon-attached
+              Прикрепить изображение
+            %span
+            %input{:onchange => 'Kabbalah.input_file(this);', :type=>'file', :value => ''}
+      .form-line
+        .fl25
+          &nbsp;
+        .fl75
+          %a.change_events_info{:href => 'javascript:;', :title => ''}
+            %i.icon-pencil
+            Сохранить изменения
+    .teacher_student_list
+      %table
+        %thead
+          %tr
+            %th
+              %span
+                Имя
+            %th
+              %span
+                e-mail
+            %th
+              %span
+                Телефон
+            %th.ic_last
+              %span
+                &nbsp;
+            %th.ic_last
+              %span
+                &nbsp;
+          %tr.right_action
+            %th{:colspan => '5'}
+              %a{:href => '', :title => ''}
+                Удалить отмеченных
+
+        %tbody
+          %tr.not_accepted
+            %td
+              %span
+              %i.icon-blue-accept-elips
+              %a{:href => '', :title => ''}
+                Александр Дмитриевич
+            %td
+              rector@sitc.ru
+            %td
+              +79015360057
+            %td
+              %i.icon-mail-mini-gray
+            %td
+              .checkbox
+          %tr
+            %td
+              %span
+              %i.icon-blue-accept-elips
+              %a{:href => '', :title => ''}
+                Александр Дмитриевич
+            %td
+              rector@sitc.ru
+            %td
+              +79015360057
+            %td
+              %i.icon-mail-mini-gray
+            %td
+              .checkbox.checked
+          %tr.not_accepted
+            %td
+              %span
+              %i.icon-blue-accept-elips
+              %a{:href => '', :title => ''}
+                Александр Дмитриевич
+            %td
+              rector@sitc.ru
+            %td
+              +79015360057
+            %td
+              %i.icon-mail-mini-gray
+            %td
+              .checkbox
+          %tr.not_accepted
+            %td
+              %span
+              %i.icon-blue-accept-elips
+              %a{:href => '', :title => ''}
+                Александр Дмитриевич
+            %td
+              rector@sitc.ru
+            %td
+              +79015360057
+            %td
+              %i.icon-mail-mini-gray
+            %td
+              .checkbox
+          %tr
+            %td.add{:colspan => '5'}
+              %a{:href => 'javascript:;', :title => ''}
+                %i.icon-user-gray
+                Добавить ученика
+          %tr
+            %td
+              %span
+            %td
+              %span
+            %td
+              %span
+            %td
+              %span
+            %td
+              %span
+  .clear
+  .btn.btn-big-two.pull-right.margin_b_50
+    +  Добавить мероприятие
+  .clear
+  .calendar-event-preview
+    %div.full-line
+      %i.icon-blue-accept-elips
+      Ученики будут записаны на занятия после подтверждения
+    .clear
+    %div
+      .calendar_event_icon.calendar_event_neutral_day.elepsed
+      Частично занятые дни
+    %div
+      .calendar_event_icon.calendar_event_good_day.elepsed
+      Полностью занятые
+.right_side
+  =render 'teacher_right_column'

@@ -1,0 +1,115 @@
+.left_side
+  %h3.margin_b_0.border-none
+    Мои ученики
+    %form.form.form-vertical
+      .form-line
+        .fl75
+          %input{:type => 'text', :value => "", :placeholder => 'Имя', :name => ''}
+        .fl25
+          %button.btn.btn-transparent.full-width.btn-big  Найти
+  .clear
+  .teacher_student_list
+    %table
+      %thead
+        %tr
+          %th
+            %span
+              Имя
+          %th
+            %span
+              e-mail
+          %th
+            %span
+              Телефон
+          %th.ic_last
+            %span
+              &nbsp;
+          %th.ic_last
+            %span
+              &nbsp;
+      %tbody
+        %tr
+          %td
+            %a{:href => '', :title => ''}
+              Александр Дмитриевич
+          %td
+            rector@sitc.ru
+          %td
+            +79015360057
+          %td
+            %i.icon-mail-mini-gray
+          %td
+            %i.icon-calendar
+        %tr
+          %td
+            %a{:href => '', :title => ''}
+              Александр Дмитриевич
+          %td
+            rector@sitc.ru
+          %td
+            +79015360057
+          %td
+            %i.icon-mail-mini-gray
+          %td
+            %i.icon-calendar
+        %tr
+          %td
+            %a{:href => '', :title => ''}
+              Александр Дмитриевич
+          %td
+            rector@sitc.ru
+          %td
+
+          %td
+            %i.icon-mail-mini-gray
+          %td
+            %i.icon-calendar
+        %tr
+          %td
+            %a{:href => '', :title => ''}
+              Александр Дмитриевич
+          %td
+
+          %td
+            +79015360057
+          %td
+            %i.icon-mail-mini-gray
+          %td
+            %i.icon-calendar
+        %tr.last_not_remove
+          %td
+            %span
+          %td
+            %span
+          %td
+            %span
+          %td
+            %span
+          %td
+            %span
+  .clear
+  .pagination.pagination-left
+    %a.btn-ellips.btn-ellips-left.pull-left{:href => "#", :title => ""}
+      %span
+    %a.btn-ellips.btn-ellips-link.curent{:href => "", :title => ""}
+      %span
+        1
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        2
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        3
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        8
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        \. . .
+    %a.btn-ellips.btn-ellips-link{:href => "", :title => ""}
+      %span
+        25
+    %a.btn-ellips.btn-ellips-right.pull-right{:href => "#", :title => ""}
+      %span
+.right_side
+  =render 'teacher_right_column'
