@@ -151,18 +151,23 @@
 .ui-datepicker td span,
 .ui-datepicker td a {
     display: block;
-    width: 23px;
-    height: 23px;
+    width: 21px;
+    height: 21px;
     text-align: center;
-    line-height: 24px;
+    line-height: 21px;
     color: #000000;
     margin-right: 8px;
-    font-size: 11px
+    font-size: 11px;
+    border: 1px solid transparent;
 }
 .ui-datepicker td span:hover,
 .ui-datepicker td a:hover {
-    background: #26a0ad;
-    color: #ffffff;
+    background: #ffffff;
+    color: #26a0ad;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: 1px solid rgb(219,219,219);
     text-decoration: none;
 }
 .ui-datepicker-other-month{

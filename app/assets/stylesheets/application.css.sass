@@ -2,7 +2,8 @@
 @import mixins
 @import datepicker
 @import nanoscroll
-
+@import idangerous.chopslider-3.4
+@import big_calendar
 $default_color: #262626
 $link_color: $default_color
 $link_color-white: #ffffff
@@ -109,7 +110,7 @@ textarea
         .delimer
           width: 0px
           padding: 3px 0
-          margin-left: -10px
+          margin-left: -13px
           text-decoration: none
         .forgot_password
           padding-left: 0
@@ -119,7 +120,7 @@ textarea
           input
             width: 210px
             height: 25px
-            line-height: 14px
+            //line-height: 14px
             &:first-child
               margin-right: 5px
         .personal_cabinet
@@ -166,36 +167,42 @@ textarea
         position: relative
         &:last-child
           border: none
+
         a
           padding: 14px 20px
           text-transform: uppercase
           font-size: 14px
           display: block
           color: $default_color
+
           &:hover
             text-decoration: none
-            color: $link_color_hover
+            //color: $link_color_hover
         .active
           background: #d7d7d7
           color: $link_color_hover
         ul
           display: none
           position: absolute
-          top: 44px
-          left: 0
+          top: 47px
+          left: -1px
           background: #ffffff
           list-style: none
           margin: 0
           padding: 16px 20px
           overflow: hidden
           z-index: 500
+          padding-right: 100px
+          border-left: 1px solid $border_color
+          border-right: 1px solid $border_color
+          border-bottom: 1px solid $border_color
           li
             width: 100%
             border: none
             display: block
             a
-              font-size: 13px
-              margin-bottom: 8px
+              font-size: 12px
+              margin-bottom: 7px
               color: $default_color
               display: block
               text-transform: none
@@ -203,10 +210,16 @@ textarea
               padding: 0
               &:hover
                 color: $link_color_hover
+          li:last-child
+            a
+              margin-bottom: 0
+      >li
+        >a
+          letter-spacing: 1px
       .hover
         >a
           background: #ffffff
-          color: $link_color_hover
+          color: #000000
       li:hover
         ul
           display: block
@@ -255,7 +268,7 @@ textarea
         float: left
         margin: 0
         margin-left: 22px
-        margin-top: 8px
+        margin-top: 4px
         color: #ffffff
       .btn
         font-size: 14px
@@ -296,11 +309,14 @@ textarea
           float: right
           font-size: 12px
           margin-left: 10px
-          text-decoration: underline
+          text-decoration: none
           line-height: 41px
           height: 33px
+          span
+            text-decoration: underline
           &:hover
-            text-decoration: none
+            span
+              text-decoration: none
         .text
           text-decoration: none !important
           cursor: default
@@ -441,7 +457,7 @@ textarea
                 width: 100%
                 font-size: 14px
                 font-family: $serif
-            .info
+          .info
             width: 100%
             overflow: hidden
             margin-bottom: 15px
@@ -485,14 +501,18 @@ textarea
       .teacher-list
         width: 100%
         .teacher-list-line
-          wiodth: 100%
+          width: 100%
           overflow: hidden
           margin-bottom: 20px
+          a:first-child
+            i
+              margin-left: 0
           .name
             width: 100%
             font-size: 23px
             font-family: $serif
             margin-bottom: 3px
+          .btn-list-left
       .images_box
         overflow: hidden
         width: 100%
@@ -535,7 +555,7 @@ textarea
             &:hover
               text-decoration: none
               h4
-                color: $link_color_hover !important
+                text-decoration: underline !important
             span
               display: block
               width: 100%
@@ -654,11 +674,11 @@ textarea
         width: 100%
         overflow: hidden
         text-align: center
-        margin-bottom: 70px
-      .pagination-left
-        text-align: left
-        .btn-ellips-left
-          display: none
+        margin-bottom: 40px
+      //.pagination-left
+      //  text-align: left
+      //  .btn-ellips-left
+      //    display: none
       .content_box
         width: 100%
         overflow: hidden
@@ -729,7 +749,6 @@ textarea
                 width: 278px
                 float: left
                 margin-right: 11px
-                padding: 1px 12px
               input[type=submit]
                 padding-top: 5px
                 padding-bottom: 5px
@@ -956,7 +975,7 @@ textarea
               line-height: 22px
               margin-bottom: 13px
       .chat_scroll_bar,
-      .mCSB_scrollTools
+      .mCSB_dragger
         position: absolute
         top: 0
         right: 0
@@ -1112,6 +1131,12 @@ textarea
           background: url('/assets/soc_ico.png') center top no-repeat
         .v
           background: url('/assets/soc_ico.png') right top no-repeat
+        .f:hover
+          background: url('/assets/soc_ico.png') left bottom no-repeat
+        .t:hover
+          background: url('/assets/soc_ico.png') center bottom no-repeat
+        .v:hover
+          background: url('/assets/soc_ico.png') right bottom no-repeat
     .video_container
       width: 100%
       display: table
@@ -1142,11 +1167,12 @@ textarea
         overflow: visible
         padding: 0
         margin: 0
-        margin-right: 20px
+        margin-right: 0px
         position: absolute
         right: 0
         top: 20px
         bottom: 20px
+        width: 220px
         .content_slider
           width: 100%
           margin-bottom: 0 !important
@@ -1186,6 +1212,9 @@ textarea
                   margin: 0
                   padding: 0
                   line-height: 20px
+      .mCSB_scrollTools
+        top: -20px
+        bottom: -20px
   #footer_banner
     overflow: hidden
     width: 100%
@@ -1209,6 +1238,7 @@ textarea
           border: 1px solid $border_color
           margin: 0
           width: 218px
+          padding-right: 25px
         input[type=submit]
           left: 199px
           right: auto
@@ -1670,9 +1700,9 @@ textarea
   position: relative
   margin: 10px 20px
   input[type=text]
-    width: 288px
+    width: 240px
     height: 25px
-    line-height: 14px
+    //line-height: 14px
     background: #ffffff
     border: none
     @include radius(15px)
@@ -1703,7 +1733,7 @@ textarea
   text-decoration: none
   &:hover,
   &:focus
-    color: $link_color_hover
+    color: #87e0ea
     text-decoration: none
     @include gradient_vertical(#0092a3, #018391)
   &:active
@@ -1711,6 +1741,7 @@ textarea
   i
     font-size: 16px
     float: left
+
 .btn-list-left
   width: 100%
   .btn
@@ -1802,9 +1833,10 @@ input[type=password],
 input[type=mail],
 select
   width: 100%
-  height: 29px
-  line-height: 26px
-  padding: 0 12px
+  //height: 29px
+  //line-height: 26px
+  padding: 6px 12px
+  padding-bottom: 5px
   font-size: 14px
   border: none
   @include radius(5px)
@@ -2086,10 +2118,9 @@ i.icon-blue-accept-elips
   cursor: pointer
   @include transition(0)
   &:hover
-    width: 28px
-    height: 28px
-    border: 1px solid $border_color
-    background: #ffffff
+    width: 30px
+    height: 30px
+    background: rgb(219, 219, 219)
     @include transition(0)
   span
     display: block
@@ -2139,3 +2170,14 @@ i.icon-blue-accept-elips
   margin: 40px 0
 .elepsed
   @include radius(20px)
+
+/* Firefox */
+@-moz-document url-prefix()
+  .btn
+    padding-bottom: 5px
+
+  #box #body .left_side .content_box .w100 .suscribe_best_day form input[type="submit"]
+    padding: 7px 27px
+    margin-bottom: 8px
+  .find input[type="submit"]
+    top: 7px
