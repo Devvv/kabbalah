@@ -1,19 +1,34 @@
 .big-slider
-  .big-slider-view#index_slider
-    %a{:href=>'', :title=>''}
+  .big-slider-view#index_slider.cs3
+    %a.cs3-slide{:href=>'', :title=>''}
       %img{:src => '/assets/demo/slide-big-one.jpg', :width => '970', :height => '390', :alt => '' }
-    %a{:href=>'', :title=>''}
+    %a.cs3-slide{:href=>'', :title=>''}
       %img{:src => '/assets/demo/slide-big-two.jpg', :width => '970', :height => '390', :alt => '' }
-    %a{:href=>'', :title=>''}
+    %a.cs3-slide{:href=>'', :title=>''}
       %img{:src => '/assets/demo/slide-big-three.jpg', :width => '970', :height => '390', :alt => '' }
+  .cs3-pagination.pagination
 :javascript
-  $(function(){
-    window.myFlux = new flux.slider('#index_slider', {
-      pagination: true,
-      autoplay: true,
-      transitions: ['blocks']
-    });
-  });
+  jQuery(function(){ ! $(".cs3").cs3({
+    pathToCS3 : '/assets/' ,
+    effects : 'puzzles',
+    autoplay : {
+      enabled : true,
+      delay : 4000,
+      disableOnInteraction : true
+    },
+    pagination : {
+      container : '.cs3-pagination',
+      hideOnStart : false,
+      showOnlyOnHover : false
+    },
+    responsive:true,
+    responsiveSetSize : true,
+    touch:{
+      enabled : true,
+      effect : 'cube'
+    }
+  })})
+
 
 .slider_line
   %p
