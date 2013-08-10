@@ -1,171 +1,3 @@
-.DynarchCalendar
-  border: 1px solid #ccc
-  -moz-user-select: none
-  -webkit-user-select: none
-  user-select: none
-  font: 11px "lucida grande", tahoma, verdana, sans-serif
-  line-height: 14px
-  position: relative
-  cursor: default
-  color: #333
-  table
-    border-collapse: collapse
-    font: 11px "lucida grande", tahoma, verdana, sans-serif
-    line-height: 14px
-    margin-left: auto
-    margin-right: auto
-
-.DynarchCalendar-topBar
-  padding: 5px 0 0 0
-
-table.DynarchCalendar-titleCont
-  font-size: 130%
-  font-weight: bold
-  color: #444
-  text-align: center
-  z-index: 9
-  position: relative
-  margin: -6px auto 0
-
-.DynarchCalendar-title div
-  padding: 11px 15px
-
-.DynarchCalendar-hover-title div
-  background-color: #fff
-  border: 1px solid #000
-  background-image: url("/assets/big_calendar/drop-down.gif")
-  background-repeat: no-repeat
-  background-position: 100% 50%
-
-.DynarchCalendar-pressed-title div
-  border: 1px solid #000
-  background-color: #777
-  color: #fff
-  background-image: url("img/drop-up.gif")
-  background-repeat: no-repeat
-  background-position: 100% 50%
-
-.DynarchCalendar-hover-title div, .DynarchCalendar-pressed-title div
-  padding: 10px 14px
-
-.DynarchCalendar-bottomBar
-  padding: 2px
-  position: relative
-  text-align: center
-
-.DynarchCalendar-bottomBar-today
-  padding: 2px 15px
-  margin-bottom: 4px
-  width: 45px
-
-.DynarchCalendar-hover-bottomBar-today
-  border: 1px solid #000
-  background-color: #fff
-  padding: 1px 14px
-  width: 44px
-
-.DynarchCalendar-pressed-bottomBar-today
-  border: 1px solid #000
-  background-color: #777
-  color: #fff
-  padding: 1px 14px
-
-.DynarchCalendar-body
-  position: relative
-  overflow: hidden
-  padding-top: 5px
-  padding-bottom: 5px
-
-.DynarchCalendar-first-col
-  padding-left: 5px
-
-.DynarchCalendar-last-col
-  padding-right: 5px
-
-.DynarchCalendar-animBody-backYear
-  position: absolute
-  top: -100%
-  left: 0
-
-.DynarchCalendar-animBody-back
-  position: absolute
-  top: 5px
-  left: -100%
-
-.DynarchCalendar-animBody-fwd
-  position: absolute
-  top: 5px
-  left: 100%
-
-.DynarchCalendar-animBody-now
-  position: absolute
-  top: 5px
-  left: 0
-
-.DynarchCalendar-animBody-fwdYear
-  position: absolute
-  top: 100%
-  left: 0
-
-.DynarchCalendar-dayNames
-  padding-left: 5px
-  padding-right: 5px
-  div
-    font-weight: bold
-
-.DynarchCalendar-navBtn
-  position: absolute
-  top: 5px
-  z-index: 10
-  div
-    background-repeat: no-repeat
-    background-position: 50% 50%
-    height: 15px
-    width: 16px
-    padding: 5px
-
-.DynarchCalendar-hover-navBtn div
-  border: 1px solid #000
-  background-color: #fff
-
-.DynarchCalendar-navDisabled
-  opacity: 0.3
-  filter: alpha(opacity = 30)
-
-.DynarchCalendar-pressed-navBtn div
-  border: 1px solid #000
-  background-color: #777
-  color: #fff
-
-.DynarchCalendar-hover-navBtn div, .DynarchCalendar-pressed-navBtn div
-  padding: 4px
-
-.DynarchCalendar-prevMonth
-  left: 33px
-
-.DynarchCalendar-nextMonth
-  left: 100%
-  margin-left: -59px
-
-.DynarchCalendar-prevYear
-  left: 5px
-
-.DynarchCalendar-nextYear
-  left: 100%
-  margin-left: -31px
-
-.DynarchCalendar-prevMonth div
-  background-image: url("/assets/big_calendar/nav-left.gif")
-
-.DynarchCalendar-nextMonth div
-  background-image: url("/assets/big_calendar/nav-right.gif")
-
-.DynarchCalendar-prevYear div
-  background-image: url("/assets/big_calendar/nav-left-x2.gif")
-
-.DynarchCalendar-nextYear div
-  background-image: url("/assets/big_calendar/nav-right-x2.gif")
-
 .DynarchCalendar-menu
   position: absolute
   left: 0
@@ -214,6 +46,223 @@ table.DynarchCalendar-titleCont
   margin-bottom: 3px
   padding: 0 !important
 
+.DynarchCalendar-menu
+  border-radius: 5px
+  /* Internet Explorer
+  *background: #ccc
+  /* Recent browsers
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc))
+  background-image: -webkit-linear-gradient(top, white, #cccccc)
+  background-image: -moz-linear-gradient(top, white, #cccccc)
+  background-image: -o-linear-gradient(top, white, #cccccc)
+  background-image: linear-gradient(top, white, #cccccc)
+  background-image: -ms-linear-gradient(top, white 0%, #cccccc 100%)
+
+#eventsCalendar .DynarchCalendar-day.calendarEvent
+  color: #ffffff
+  background: #26a0ad
+  cursor: pointer
+
+.DynarchCalendar
+  //border: 1px solid #ccc
+  -moz-user-select: none
+  -webkit-user-select: none
+  user-select: none
+  line-height: 14px
+  position: relative
+  cursor: default
+  color: #333
+  table
+    border-collapse: collapse
+    font: 11px "lucida grande", tahoma, verdana, sans-serif
+    line-height: 14px
+    margin-left: auto
+    margin-right: auto
+
+.DynarchCalendar-topBar
+  padding: 5px 0 0 0
+
+table.DynarchCalendar-titleCont
+  font-size: 130%
+  font-weight: bold
+  color: #444
+  text-align: center
+  z-index: 9
+  position: relative
+  margin: -6px auto 0
+
+.DynarchCalendar-title div
+  padding: 11px 15px
+  font-size: 20px
+  cursor: pointer
+.DynarchCalendar-hover-title div
+  //background-color: #fff
+  //border: 1px solid #000
+  //background-image: url("/assets/big_calendar/drop-down.gif")
+  //background-repeat: no-repeat
+  //background-position: 100% 50%
+
+.DynarchCalendar-pressed-title div
+  //border: 1px solid #000
+  //background-color: #777
+  //color: #fff
+  //background-image: url("img/drop-up.gif")
+  //background-repeat: no-repeat
+  //background-position: 100% 50%
+
+//.DynarchCalendar-hover-title div, .DynarchCalendar-pressed-title div
+//  padding: 10px 14px
+
+.DynarchCalendar-bottomBar
+  //padding: 2px
+  position: relative
+  text-align: center
+
+.DynarchCalendar-bottomBar-today
+  cursor: pointer !important
+  padding: 10px 0
+
+
+
+.DynarchCalendar-pressed-bottomBar-today
+  cursor: pointer !important
+
+.DynarchCalendar-body
+  position: relative
+  overflow: hidden
+  margin-top: -1px
+  table
+    tbody
+      tr
+        &:last-child
+          td
+            div
+              border-bottom: 1px solid #E5E5E5
+        td
+          &:last-child
+            div
+              border-right: 1px solid #E5E5E5
+          div
+            padding: 30px 0
+            width: 101px
+            font-size: 16px
+            background: #ffffff
+            font-weight: normal
+            border: 1px solid #E5E5E5
+            border-right: none
+            text-align: center
+            border-bottom: none
+
+
+//.DynarchCalendar-first-col
+//  padding-left: 5px
+//
+//.DynarchCalendar-last-col
+//  padding-right: 5px
+
+.DynarchCalendar-animBody-backYear
+  position: absolute
+  top: -100%
+  left: 0
+
+.DynarchCalendar-animBody-back
+  position: absolute
+  top: 0
+  left: -100%
+
+.DynarchCalendar-animBody-fwd
+  position: absolute
+  top: 0
+  left: 100%
+
+.DynarchCalendar-animBody-now
+  position: absolute
+  top: 0
+  left: 0
+
+.DynarchCalendar-animBody-fwdYear
+  position: absolute
+  top: 100%
+  left: 0
+
+.DynarchCalendar-dayNames
+  margin-top: 30px
+  table
+    tbody
+      tr
+        td
+          &:last-child
+            div
+              border-right: 1px solid #e5e5e5
+          div
+            padding: 30px 0
+            width: 101px
+            font-size: 16px
+            background: #f5f5f5
+            font-weight: bold
+            border: 1px solid #e5e5e5
+            border-right: none
+            text-align: center
+  //padding-left: 5px
+  //padding-right: 5px
+  //div
+  //  font-weight: bold
+
+.DynarchCalendar-navBtn
+  position: absolute
+  top: 0
+  z-index: 10
+//  div
+//    background-repeat: no-repeat
+//    background-position: 50% 50%
+//    height: 15px
+//    width: 16px
+//    padding: 5px
+
+//.DynarchCalendar-hover-navBtn div
+//  border: 1px solid #000
+//  background-color: #fff
+
+.DynarchCalendar-navDisabled
+  opacity: 0.3
+  filter: alpha(opacity = 30)
+
+.DynarchCalendar-pressed-navBtn div
+  border: 1px solid #000
+  background-color: #777
+  color: #fff
+
+//.DynarchCalendar-hover-navBtn div, .DynarchCalendar-pressed-navBtn div
+//  padding: 4px
+
+//.DynarchCalendar-navBtn
+//  left: 0
+.DynarchCalendar-prevMonth
+  left: 0
+.DynarchCalendar-nextMonth
+  right: 0
+
+.DynarchCalendar-prevYear
+  left: 5px
+  display: none
+.DynarchCalendar-nextYear
+  left: 100%
+  margin-left: -31px
+  display: none
+//.DynarchCalendar-prevMonth div
+//  background-image: url("/assets/big_calendar/nav-left.gif")
+//
+//.DynarchCalendar-nextMonth div
+//  background-image: url("/assets/big_calendar/nav-right.gif")
+//
+//.DynarchCalendar-prevYear div
+//  background-image: url("/assets/big_calendar/nav-left-x2.gif")
+//
+//.DynarchCalendar-nextYear div
+//  background-image: url("/assets/big_calendar/nav-right-x2.gif")
+
+
+
 .DynarchCalendar-time td
   font-weight: bold
   font-size: 120%
@@ -255,13 +304,13 @@ table.DynarchCalendar-titleCont
 
 .DynarchCalendar-hover-week!
 
-.DynarchCalendar-dayNames div, .DynarchCalendar-day
+.DynarchCalendar-day
   /*width: 1.7em;
-  width: 18px
-  padding: 6px 7px
-  text-align: center
-  border: 1px solid #ccc
-  margin: 1px
+  //width: 18px
+  //padding: 6px 7px
+  //text-align: center
+  //border: 1px solid #ccc
+  //margin: 1px
 
 .DynarchCalendar-weekNumber
   /*width: 1.7em;
@@ -273,49 +322,50 @@ table.DynarchCalendar-titleCont
   width: 2em !important
   margin-right: 5px
 
-.DynarchCalendar-dayNames div
-  &.DynarchCalendar-weekNumber
-    width: 2em !important
-    margin-right: 5px
-  border: none
-  padding: 3px 8px
+//.DynarchCalendar-dayNames div
+//  &.DynarchCalendar-weekNumber
+//    width: 2em !important
+//    margin-right: 5px
+//  border: none
+//  padding: 3px 8px
 
 /*remove border from top divs
 
-.DynarchCalendar-day
-  text-align: right
-  color: #222
+//.DynarchCalendar-day
+//  text-align: right
+//  color: #222
 
 .DynarchCalendar-day-othermonth
   color: #888
 
-.DynarchCalendar-weekend
-  color: #c22
+//.DynarchCalendar-weekend
+//  color: #c22
 
-.DynarchCalendar-day-today
-  color: #00f
+//.DynarchCalendar-day-today
+//  color: #e5e5e5
 
 .DynarchCalendar-day-disabled
   opacity: 0.5
   text-shadow: 2px 1px 1px #fff
 
-.DynarchCalendar-hover-date
-  border-color: #000
+//.DynarchCalendar-hover-date
+//  border-color: #000
+//
+//.DynarchCalendar-day-othermonth.DynarchCalendar-hover-date
+//  border-color: #aaa
+//  color: #888
 
-.DynarchCalendar-day-othermonth.DynarchCalendar-hover-date
-  border-color: #aaa
-  color: #888
+//.DynarchCalendar-dayNames .DynarchCalendar-weekend
+//  color: #c22
 
-.DynarchCalendar-dayNames .DynarchCalendar-weekend
-  color: #c22
-
-.DynarchCalendar-day-othermonth.DynarchCalendar-weekend
-  color: #d88
+//.DynarchCalendar-day-othermonth.DynarchCalendar-weekend
+//  color: #d88
 
 .DynarchCalendar-day-selected!
 
-.DynarchCalendar-day-today.DynarchCalendar-day-selected
-  background-color: #999
+.DynarchCalendar-day-today
+  background: #e5e5e5 !important
+  color: inherit
 
 /* focus
 
@@ -349,54 +399,54 @@ table.DynarchCalendar-titleCont
   display: inline-block
   *zoom: 1
   *display: inline
-
-.DynarchCalendar
-  td div
-    &.default
-      background: rgba(125, 255, 20, 0.4)
-    &.party
-      background: rgba(0, 125, 255, 0.4)
-  &.DynarchCalendar-td-selected div.party
-    background: rgba(0, 125, 255, 0.9)
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)
-  .DynarchCalendar-td-selected div.default
-    background: rgba(0, 255, 20, 0.9)
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)
-  a
-    color: #444
-  .DynarchCalendar-day-selected a
-    color: #fff
+//
+//.DynarchCalendar
+//  td div
+//    &.default
+//      background: rgba(125, 255, 20, 0.4)
+//    &.party
+//      background: rgba(0, 125, 255, 0.4)
+//  &.DynarchCalendar-td-selected div.party
+//    background: rgba(0, 125, 255, 0.9)
+//    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)
+//  .DynarchCalendar-td-selected div.default
+//    background: rgba(0, 255, 20, 0.9)
+//    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)
+//  a
+//    color: #444
+//  .DynarchCalendar-day-selected a
+//    color: #fff
 
 #eventsCalendar
   .DynarchCalendar
-    border-radius: 5px
-    background: white url('/assets/big_calendar/calendar-bg.gif') repeat-x
+    //border-radius: 5px
+    //background: white url('/assets/big_calendar/calendar-bg.gif') repeat-x
   .DynarchCalendar-day
-    border-radius: 2px
-    color: #545454
-    font-weight: bold
-    text-align: center
-    /* Internet Explorer
-    *background: #ffffff
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#FFf6f6f6, endColorstr=#FFffffff)
-    /* Recent browsers
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(white))
-    background-image: -webkit-linear-gradient(top, #f6f6f6, white)
-    background-image: -moz-linear-gradient(top, #f6f6f6, white)
-    background-image: -o-linear-gradient(top, #f6f6f6, white)
-    background-image: linear-gradient(top, #f6f6f6, white)
-    background-image: -ms-linear-gradient(top, #f6f6f6 0%, white 100%)
+    //border-radius: 2px
+    //color: #545454
+    //font-weight: bold
+    //text-align: center
+    ///* Internet Explorer
+    //*background: #ffffff
+    //filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#FFf6f6f6, endColorstr=#FFffffff)
+    ///* Recent browsers
+    //background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(white))
+    //background-image: -webkit-linear-gradient(top, #f6f6f6, white)
+    //background-image: -moz-linear-gradient(top, #f6f6f6, white)
+    //background-image: -o-linear-gradient(top, #f6f6f6, white)
+    //background-image: linear-gradient(top, #f6f6f6, white)
+    //background-image: -ms-linear-gradient(top, #f6f6f6 0%, white 100%)
   .DynarchCalendar-day-othermonth
-    border-color: transparent
-    color: #aaa
+    //border-color: transparent
+    //color: #aaa
   .DynarchCalendar-day-today!
     .DynarchCalendar-weekend
       color: #cc2222
-    .DynarchCalendar-day-othermonth.DynarchCalendar-weekend
-      color: rgba(203, 35, 35, 0.38)
+    //.DynarchCalendar-day-othermonth.DynarchCalendar-weekend
+    //  color: rgba(203, 35, 35, 0.38)
     .DynarchCalendar-hover-date!
-      .DynarchCalendar-day-othermonth.DynarchCalendar-hover-date
-        border-color: #ccc
+      //.DynarchCalendar-day-othermonth.DynarchCalendar-hover-date
+      //  border-color: #ccc
       .DynarchCalendar-day-selected
         border: 1px solid #000
       .DynarchCalendar-day-othermonth.DynarchCalendar-day-selected
@@ -420,44 +470,26 @@ table.DynarchCalendar-titleCont
         box-shadow: 1px 1px 1px #fff inset
         cursor: pointer
 
-#eventsCalendarTooltip .tooltipBody .dateEvent.linked:hover
-  color: #6482AA
-  border: 1px solid #6482AA
-  text-shadow: 0 1px 1px #FFFFFF
-  /* Internet Explorer
-  *background: #c9e7e9
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#FFdaeeed, endColorstr=#FFc9e7e9)
-  /* Recent browsers
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#daeeed), to(#c9e7e9))
-  background-image: -webkit-linear-gradient(top, #daeeed, #c9e7e9)
-  background-image: -moz-linear-gradient(top, #daeeed, #c9e7e9)
-  background-image: -o-linear-gradient(top, #daeeed, #c9e7e9)
-  background-image: linear-gradient(top, #daeeed, #c9e7e9)
-  background-image: -ms-linear-gradient(top, #daeeed 0%, #c9e7e9 100%)
-  -webkit-box-shadow: 1px 1px 1px #fff inset
-  -moz-box-shadow: 1px 1px 1px #fff inset
-  box-shadow: 1px 1px 1px #fff inset
-  cursor: pointer
+//#eventsCalendarTooltip .tooltipBody .dateEvent.linked:hover
+//  color: #6482AA
+//  border: 1px solid #6482AA
+//  text-shadow: 0 1px 1px #FFFFFF
+//  /* Internet Explorer
+//  *background: #c9e7e9
+//  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#FFdaeeed, endColorstr=#FFc9e7e9)
+//  /* Recent browsers
+//  background-image: -webkit-gradient(linear, left top, left bottom, from(#daeeed), to(#c9e7e9))
+//  background-image: -webkit-linear-gradient(top, #daeeed, #c9e7e9)
+//  background-image: -moz-linear-gradient(top, #daeeed, #c9e7e9)
+//  background-image: -o-linear-gradient(top, #daeeed, #c9e7e9)
+//  background-image: linear-gradient(top, #daeeed, #c9e7e9)
+//  background-image: -ms-linear-gradient(top, #daeeed 0%, #c9e7e9 100%)
+//  -webkit-box-shadow: 1px 1px 1px #fff inset
+//  -moz-box-shadow: 1px 1px 1px #fff inset
+//  box-shadow: 1px 1px 1px #fff inset
+//  cursor: pointer
 
-#eventsCalendar
-  .DynarchCalendar-navBtn div
-    border-color: #aaa
-    border-radius: 50%
-  .DynarchCalendar-title div
-    border-radius: 0 0 7px 7px
-  .DynarchCalendar-hover-bottomBar-today
-    border-radius: 2px
-  .DynarchCalendar-menu
-    border-radius: 5px
-    /* Internet Explorer
-    *background: #ccc
-    /* Recent browsers
-    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc))
-    background-image: -webkit-linear-gradient(top, white, #cccccc)
-    background-image: -moz-linear-gradient(top, white, #cccccc)
-    background-image: -o-linear-gradient(top, white, #cccccc)
-    background-image: linear-gradient(top, white, #cccccc)
-    background-image: -ms-linear-gradient(top, white 0%, #cccccc 100%)
+
 
 #eventsCalendarTooltip
   background: rgb(255, 255, 255)
@@ -475,26 +507,11 @@ table.DynarchCalendar-titleCont
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(238, 238, 238, 1) 100%)
 /* W3C
 
-.DynarchCalendar-dayNames div, .DynarchCalendar-day, .DynarchCalendar-weekNumber
-  width: 82px !important
-  padding: 30px 7px !important
+//.DynarchCalendar-dayNames div, .DynarchCalendar-day, .DynarchCalendar-weekNumber
+//  width: 82px !important
+//  padding: 30px 7px !important
   
-#eventsCalendar .DynarchCalendar-day.calendarEvent
-  color: #6482AA
-  border: 1px solid #6482AA
-  text-shadow: 0 1px 1px #FFF
-  background: #C9E7E9
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#FFdaeeed, endColorstr=#FFc9e7e9)
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#DAEEED), to(#C9E7E9))
-  background-image: -webkit-linear-gradient(top, #DAEEED, #C9E7E9)
-  background-image: -moz-linear-gradient(top, #DAEEED, #C9E7E9)
-  background-image: -o-linear-gradient(top, #DAEEED, #C9E7E9)
-  background-image: linear-gradient(top, #DAEEED, #C9E7E9)
-  background-image: -ms-linear-gradient(top, #DAEEED 0%, #C9E7E9 100%)
-  -webkit-box-shadow: 1px 1px 1px #FFF inset
-  -moz-box-shadow: 1px 1px 1px #fff inset
-  box-shadow: 1px 1px 1px #FFF inset
-  cursor: pointer
+
 
 
 /* native tooltip
@@ -525,25 +542,37 @@ table.DynarchCalendar-titleCont
 #eventsCalendarTooltip
   text-align: left
   position: absolute
-  width: 260px
+  width: 290px
   display: none
-  border: 1px solid #ccc
-  border-radius: 4px
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3)
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3)
   z-index: 100
   color: #fff
   overflow: visible
+  background: #ffffff
   .arrow
     position: absolute
-    top: 7px
-    left: -18px
-    width: 20px
-    height: 38px
-    background: url(/assets/big_calendar/tooltip_arrow.png) left top no-repeat
+    top: 0px
+    left: 0px
+    width: 15px
+    height: 0px
     z-index: 105
+    &:after
+      right: 100%
+      border: solid rgba(0, 0, 0, 0)
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(136, 183, 213, 0)
+      border-right-color: #ffffff
+      border-width: 15px
+      top: 50%
+      margin-top: 0px
+      border-top-width: 0px
   .tooltipBody
     position: relative
-    padding: 17px
+    padding: 15px 20px
     .eventHeader
       font-size: 1.3em
       font-weight: normal
@@ -556,15 +585,21 @@ table.DynarchCalendar-titleCont
     display: block
     border: 1px solid transparent
     text-decoration: none
-    padding: 10px
-    color: #444
+    padding: 15px 0
+    color: #000000
     border-top: 1px solid #ccc
     &:first-child
       margin-top: 0
       border-top: 1px solid transparent
+    &.linked
+      color: #26a0ad
     &.linked:hover
-      border-radius: 3px
-      border-top: 1px solid #6482AA
+      color: #26a0ad
+    .eventHeader
+      font-size: 14px
+      font-weight: bold
+    .dateRange
+      font-size: 12px
     a
       color: #fff
     .dateRange
@@ -573,6 +608,6 @@ table.DynarchCalendar-titleCont
     color: #999
     text-decoration: none
     position: absolute
-    right: 5px
-    top: 3px
+    right: 6px
+    top: 0
     font-size: 16px

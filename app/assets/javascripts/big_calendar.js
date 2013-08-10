@@ -261,8 +261,8 @@ var
                 if($tooltip.css('display') == 'none') {
                     $tooltip
                         .animate({
-                            top: _offset.top - tooltipOffset.top,
-                            left: _offset.left + tooltipOffset.left
+                            top: _offset.top + 5,
+                            left: _offset.left + 95
                         })
                         .fadeIn();
                     return;
@@ -301,8 +301,8 @@ var
                         .find('a.close').on('click',function closeTooltip(){ $tooltip.fadeOut(); })
                         .end()
                         .animate({
-                            top: _offset.top - tooltipOffset.top,
-                            left: _offset.left +tooltipOffset.left
+                            top: _offset.top + 5,
+                            left: _offset.left + 95
                         })
                         .fadeIn()
                         .removeClass()
@@ -321,8 +321,8 @@ var
         function animateTooltip($el,offset){
             $el
                 .animate({
-                    top: offset.top - tooltipOffset.top,
-                    left: offset.left +tooltipOffset.left
+                    top: offset.top + 5,
+                    left: offset.left + 95
                 })
                 .fadeIn();
             return $el;
@@ -347,11 +347,11 @@ var
                     $(item)
                         .wrapInner('<a class="calendarEventLink" href="#tooltip"></a>')
                         .on({
-                            'mouseover' : function(e){ },
-                            'mouseenter': function(e){ },
-                            'click': function(e){ },
-                            'mousedown': function(e){ },
-                            'mouseup': function(e){ }
+                            'mouseover' : function(e){ e.prevendDefault() },
+                            'mouseenter': function(e){ e.prevendDefault() },
+                            'click': function(e){ e.prevendDefault() },
+                            'mousedown': function(e){ e.prevendDefault() },
+                            'mouseup': function(e){ e.prevendDefault() }
                         });
                 }
             });

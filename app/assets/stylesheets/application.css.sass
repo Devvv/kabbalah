@@ -4,6 +4,9 @@
 @import nanoscroll
 @import idangerous.chopslider-3.4
 @import big_calendar
+@import tooltipster
+
+
 $default_color: #262626
 $link_color: $default_color
 $link_color-white: #ffffff
@@ -971,10 +974,11 @@ textarea
               line-height: 22px
               margin-bottom: 13px
       .chat_scroll_bar,
-      .mCSB_dragger
+      .mCSB_draggerContainer
         position: absolute
         top: 0
         right: 0
+        left: auto
         bottom: 0
         width: 8px
         border-left: 1px solid $border_color
@@ -1166,12 +1170,14 @@ textarea
         margin-right: 0px
         position: absolute
         right: 0
-        top: 20px
-        bottom: 20px
+        top: 0
+        bottom: 0
         width: 220px
+        margin-bottom: 0 !important
         .content_slider
           width: 100%
           margin-bottom: 0 !important
+          padding: 20px 0
           ul
             overflow: hidden
             width: 100%
@@ -1181,8 +1187,8 @@ textarea
             li
               width: 100%
               overflow: hidden
-              padding-bottom: 5px
-              margin-bottom: 10px
+              padding-bottom: 8px
+              margin-bottom: 11px
               border-bottom: 1px solid $default_color
               &:last-child
                 border-bottom: none !important
@@ -1198,19 +1204,25 @@ textarea
                   width: 120px
                   height: 70px
                   overflow: hidden
-                  margin-bottom: 10px
+                  margin-bottom: 7px
                   img
                     width: 100%
                 p
-                  font-size: 12px
+                  font-size: 11px
                   color: #ffffff
                   width: 80%
                   margin: 0
                   padding: 0
-                  line-height: 20px
+                  line-height: 19px
       .mCSB_scrollTools
-        top: -20px
+        top: 0px
         bottom: -20px
+        width: 10px
+        .mCSB_draggerContainer
+          background: #373737
+          .mCSB_dragger
+            background: #26a0ad
+            @include radius(5px)
   #footer_banner
     overflow: hidden
     width: 100%
@@ -1560,6 +1572,7 @@ textarea
         width: 707px
         overflow: hidden
         position: relative
+        float: left
         a
           color: #a6a6a6
           &:hover
@@ -2102,9 +2115,73 @@ i.icon-blue-accept-elips
   margin-bottom: 70px !important
 .margin_b_80
   margin-bottom: 80px !important
+
+.ui-datepicker-today
+  span, a
+    background: #ffffff
+    color: #26a0ad !important
+    -webkit-border-radius: 50px
+    -moz-border-radius: 50px
+    border-radius: 50px
+    border: 1px solid #ededed !important
+    text-decoration: none
+
+.ui-datepicker-calendar
+  tbody
+    tr
+      .event_day
+        span,
+        a
+          background: #26a0ad !important
+          color: #ffffff !important
+          -webkit-border-radius: 50px !important
+          -moz-border-radius: 50px !important
+          border-radius: 50px !important
+          text-decoration: none !important
+          -webkit-border-radius: 0 !important
+          -moz-border-radius: 0 !important
+          border-radius: 0 !important
+          border: none !important
+      .good_day
+        span,
+        a
+          background: #26a0ad !important
+          color: #ffffff !important
+          text-decoration: none !important
+          -webkit-border-radius: 0 !important
+          -moz-border-radius: 0 !important
+          border-radius: 0 !important
+          border: none !important
+      .neutral_day
+        span,
+        a
+          background: #ededed !important
+          color: inherit !important
+          text-decoration: none !important
+          -webkit-border-radius: 0 !important
+          -moz-border-radius: 0 !important
+          border-radius: 0 !important
+          border: none !important
+      .bad_day
+        span,
+        a
+          background: #8c0035
+          color: #ffffff !important
+          text-decoration: none !important
+          -webkit-border-radius: 0 !important
+          -moz-border-radius: 0 !important
+          border-radius: 0 !important
+          border: none !important
+
+
+
+
+
 .btn-ellips,
 .ui-datepicker-prev,
-.ui-datepicker-next
+.ui-datepicker-next,
+.DynarchCalendar-prevMonth,
+.DynarchCalendar-nextMonth
   display: inline-block
   width: 30px
   height: 30px
@@ -2118,7 +2195,8 @@ i.icon-blue-accept-elips
     height: 30px
     background: rgb(219, 219, 219)
     @include transition(0)
-  span
+  span,
+  div
     display: block
     width: 6px
     height: 10px
@@ -2129,12 +2207,16 @@ i.icon-blue-accept-elips
     margin-top: -5px
 
 .btn-ellips-left,
-.ui-datepicker-prev
-  span
+.ui-datepicker-prev,
+.DynarchCalendar-prevMonth
+  span,
+  div
     background: url("/assets/left-arrow.png") left top no-repeat
 .btn-ellips-right,
-.ui-datepicker-next
-  span
+.ui-datepicker-next,
+.DynarchCalendar-nextMonth
+  span,
+  div
     background: url("/assets/right-arrow.png") left top no-repeat
 .btn-ellips-link
   background: none !important

@@ -25,8 +25,41 @@ window.Kabbalah = {
       $('#popup')
         .find('.popup_inner')
         .load( "/popup/index "+el_id, -> $('#popup').animate({marginTop: ((-1)*($('#popup').innerHeight()/2)) + 'px' }, 200) )
-      console.log(   )
+
   }
+  numeric_slider: ->
+    $('.numeric-slider').each( ->
+      item_count = 1
+      item = $(this).find('.mini_slider_item')
+      view = $(this).find('.mini_slider_view')
+      box_couns = $(this).find('.btn-ellips_span')
+      item_size = item.size()
+      item_size_width = item.width()
+      box_couns.html( item_count + ' / ' + item_size )
+      view.width( item_size * item_size_width )
+      n_s_action = (act) ->
+        console.log( item_count, item_size )
+        if act == 'minus'
+          if item_count == 1
+              item_count = item_size
+          else
+            item_count = item_count - 1
+        if act == 'plus'
+          if item_count == item_size
+            item_count = 1
+          else
+            item_count = item_count + 1
+        view.stop().animate({marginLeft: (-1)*item_size_width*(item_count-1)}, 300)
+        box_couns.html( item_count + ' / ' + item_size )
+
+      $(this).find('.btn-ellips-left').on('click', ->
+        n_s_action('minus')
+      )
+      $(this).find('.btn-ellips-right').on('click', ->
+        n_s_action('plus')
+      )
+    )
+
   checkbox: (el) ->
     if !el
       $('.checkbox').on 'click', (e) ->
@@ -69,6 +102,7 @@ $ ->
   Kabbalah.menu_hover()
   Kabbalah.checkbox()
 
+
   $(".nano").mCustomScrollbar({
     mouseWheel: true
     scrollButtons:{
@@ -108,21 +142,32 @@ $ ->
     dayNamesShort: ['Вос','Пон','Втр','Срд','Чет','Пят','Суб'],
     dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
     weekHeader: 'Sm',
-    dateFormat: 'dd/mm/yy',
     firstDay: 1,
     isRTL: false,
     showMonthAfterYear: false,
     yearSuffix: ''
   }
   $.datepicker.setDefaults( $.datepicker.regional['ru'] )
+
+
   $('#calendar').datepicker({
-    numberOfMonths: 3,
-    showButtonPanel: false,
-    showOtherMonths: false,
+    numberOfMonths: 3
+    showButtonPanel: false
+    showOtherMonths: false
+    dateFormat: 'dd.mm.yy'
     beforeShowDay: (date) ->
-      $.each(your_dates, (i, n) ->
-#        if n.getTime() == date.getTime()
-#        return [false,"ui-state-active","Event Name"];
-      )
+      enabled = true
+      classes = ""
+      title = null
+      $.each events, ->
+        if this.Date.valueOf() is $.datepicker.formatDate( "dd.mm.yy", date).valueOf()
+          classes = this.clss+' has_event'
+      [enabled, classes, title]
+
+    onSelect: (dateText, cal) ->
+      console.log($('#calendar').delay(300).find('.ui-state-active').parent())
+
   })
+
+
 

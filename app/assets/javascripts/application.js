@@ -6,4 +6,5 @@
 //= require nano_slider
 //= require idangerous.chopslider-3.4.min
 //= require big_calendar
+//= require jquery.tooltipster
 //= require index

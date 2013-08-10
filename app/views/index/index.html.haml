@@ -97,9 +97,60 @@
     .w100
       .calendar_event
         #calendar
-
   .calendar_event_detail
-
+  :javascript
+    var events = [
+        {
+          id: 0,
+          clss: "event_day",
+          Date: "11.08.2013",
+          events: [
+            {
+              name: 'name 1',
+              start: 'начало в 20.45'
+            },
+            {
+              name: 'name 2',
+              start: 'начало в 20.45'
+            }
+          ],
+          all: {
+            show: true,
+            href: '/'
+          }
+        },
+        {
+          id: 1,
+          clss: "good_day",
+          Date: "12.08.2013",
+          events: [
+            {
+              name: 'name 1',
+              start: 'начало в 20.45'
+            },
+            {
+              name: 'name 2',
+              start: 'начало в 20.45'
+            }
+          ],
+          all: {
+            show: true,
+            href: '/'
+          }
+        },
+        {
+          id: 2,
+          clss: "neutral_day",
+          name: 'name 1',
+          Date: "13.08.2013"
+        },
+        {
+          id: 3,
+          clss: "bad_day",
+          name: 'name 1',
+          Date: "14.08.2013"
+        }
+    ]
 .right_side
   =render 'public_right_banner_column'
 
